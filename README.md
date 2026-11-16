@@ -7,6 +7,17 @@ Personagens e stages MUGEN empacotados em `.zip` para o [ultimate-mugen](https:/
 - `chars/<Nome>.zip` contém `<Nome>/<Nome>.def` e os arquivos do personagem.
 - `stages/<Nome>.zip` usa caminhos relativos à raiz do MUGEN: `stages/*.def`, `stages/*.sff` e `sound/*` (música, quando existe).
 
+## Adicionar conteúdo
+
+Todo zip em `chars/` ou `stages/` precisa de uma print em `previews/<chars|stages>/<mesmo nome>.png`. O CI (`tools/check_previews.py`) bloqueia o PR se faltar.
+
+```bash
+pip install pillow numpy
+python tools/preview.py chars/NovoChar.zip stages/NovoStage.zip
+```
+
+O gerador lê o `.sff` (v1 e v2): personagem mostra retrato (9000,1) e pose parada (0,0); stage monta as camadas do `[BGdef]`.
+
 ## Origem
 
 Extraído de packs públicos no archive.org:
@@ -19,94 +30,36 @@ Extraído de packs públicos no archive.org:
 
 Personagens e stages pertencem aos seus autores originais (veja o readme dentro de cada zip). Franquias são marcas de seus donos; uso pessoal, não comercial.
 
-## Personagens
-- Aquaman
-- Batman_Rebirth
-- BlackPanther
-- BlackWidow
-- CaptainAmerica
-- Cell_Perfect_Form
-- Cyclops
-- Darkseid
-- Deadpool
-- Deidara
-- DoctorStrange
-- Doctor_Doom
-- Freezer_4_Form
-- Future_Trunks
-- Ghost_Rider
-- Gohan_Teen_SS2
-- Gohan_Ultimate
-- Goku_Base
-- Goku_SS
-- Goku_SS2
-- Goku_SS3
-- Goku_SS4
-- GreenArrow_G
-- Hashirama
-- Hawkeye
-- Hiruzen
-- IncredibleHulk
-- Ironman
-- Itachi
-- Jiraiya
-- JohnStewartwil
-- Kid_Buu
-- Krilin
-- Lobo
-- Loki
-- Madara_Revived
-- Magneto
-- MartianManhunter
-- Minato
-- MvC2_Cyborg
-- MvC_DeathstrokeEO
-- MvC_Harley_Quinn
-- Naruto_Sennin
-- Naruto_Start
-- Nightwing_MvC
-- Obito
-- Orochimaru
-- Pain
-- Piccolo
-- Sasuke_Akatsuki
-- Shazam_G
-- Silver_surfer
-- Spiderman
-- Storm
-- Supergirl
-- Thanos
-- TheFlashnew52
-- The_Joker
-- Thor_Odinson
-- Tobirama
-- Trunks_Future_SS
-- Tsunade
-- Vegeta_Majin
-- Venom
-- Wolverine
-- Wonder_Woman_New52
-- bane
-- blackadam
-- doomsday
-- superman
+## Personagens (70)
 
-## Stages
-- Academia_Ninja
-- AvengersDay_1.1Zoom
-- Campo3
-- DarkCerebro-X3TOG(GBA)_1.1Zoom
-- Examendechunnin
-- Gotham-City
-- Grand_Fisher_Stage
-- Hall_of_Justice
-- HydraAircraftBase_1.1Zoom
-- KryptonDestroyed
-- LTDsLexcorpDemolished
-- OscorpLab_1.1Zoom
-- WayneManorRuins_1.1Zoom
-- dbcity
-- dbnamek
-- dbz_kame_house
-- tenkaichiHR
-- xmagneto
+<table>
+<tr><td align="center"><img src="previews/chars/Aquaman.png" width="200"><br><sub>Aquaman</sub></td><td align="center"><img src="previews/chars/Batman_Rebirth.png" width="200"><br><sub>Batman_Rebirth</sub></td><td align="center"><img src="previews/chars/BlackPanther.png" width="200"><br><sub>BlackPanther</sub></td><td align="center"><img src="previews/chars/BlackWidow.png" width="200"><br><sub>BlackWidow</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/CaptainAmerica.png" width="200"><br><sub>CaptainAmerica</sub></td><td align="center"><img src="previews/chars/Cell_Perfect_Form.png" width="200"><br><sub>Cell_Perfect_Form</sub></td><td align="center"><img src="previews/chars/Cyclops.png" width="200"><br><sub>Cyclops</sub></td><td align="center"><img src="previews/chars/Darkseid.png" width="200"><br><sub>Darkseid</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/Deadpool.png" width="200"><br><sub>Deadpool</sub></td><td align="center"><img src="previews/chars/Deidara.png" width="200"><br><sub>Deidara</sub></td><td align="center"><img src="previews/chars/DoctorStrange.png" width="200"><br><sub>DoctorStrange</sub></td><td align="center"><img src="previews/chars/Doctor_Doom.png" width="200"><br><sub>Doctor_Doom</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/Freezer_4_Form.png" width="200"><br><sub>Freezer_4_Form</sub></td><td align="center"><img src="previews/chars/Future_Trunks.png" width="200"><br><sub>Future_Trunks</sub></td><td align="center"><img src="previews/chars/Ghost_Rider.png" width="200"><br><sub>Ghost_Rider</sub></td><td align="center"><img src="previews/chars/Gohan_Teen_SS2.png" width="200"><br><sub>Gohan_Teen_SS2</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/Gohan_Ultimate.png" width="200"><br><sub>Gohan_Ultimate</sub></td><td align="center"><img src="previews/chars/Goku_Base.png" width="200"><br><sub>Goku_Base</sub></td><td align="center"><img src="previews/chars/Goku_SS.png" width="200"><br><sub>Goku_SS</sub></td><td align="center"><img src="previews/chars/Goku_SS2.png" width="200"><br><sub>Goku_SS2</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/Goku_SS3.png" width="200"><br><sub>Goku_SS3</sub></td><td align="center"><img src="previews/chars/Goku_SS4.png" width="200"><br><sub>Goku_SS4</sub></td><td align="center"><img src="previews/chars/GreenArrow_G.png" width="200"><br><sub>GreenArrow_G</sub></td><td align="center"><img src="previews/chars/Hashirama.png" width="200"><br><sub>Hashirama</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/Hawkeye.png" width="200"><br><sub>Hawkeye</sub></td><td align="center"><img src="previews/chars/Hiruzen.png" width="200"><br><sub>Hiruzen</sub></td><td align="center"><img src="previews/chars/IncredibleHulk.png" width="200"><br><sub>IncredibleHulk</sub></td><td align="center"><img src="previews/chars/Ironman.png" width="200"><br><sub>Ironman</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/Itachi.png" width="200"><br><sub>Itachi</sub></td><td align="center"><img src="previews/chars/Jiraiya.png" width="200"><br><sub>Jiraiya</sub></td><td align="center"><img src="previews/chars/JohnStewartwil.png" width="200"><br><sub>JohnStewartwil</sub></td><td align="center"><img src="previews/chars/Kid_Buu.png" width="200"><br><sub>Kid_Buu</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/Krilin.png" width="200"><br><sub>Krilin</sub></td><td align="center"><img src="previews/chars/Lobo.png" width="200"><br><sub>Lobo</sub></td><td align="center"><img src="previews/chars/Loki.png" width="200"><br><sub>Loki</sub></td><td align="center"><img src="previews/chars/Madara_Revived.png" width="200"><br><sub>Madara_Revived</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/Magneto.png" width="200"><br><sub>Magneto</sub></td><td align="center"><img src="previews/chars/MartianManhunter.png" width="200"><br><sub>MartianManhunter</sub></td><td align="center"><img src="previews/chars/Minato.png" width="200"><br><sub>Minato</sub></td><td align="center"><img src="previews/chars/MvC2_Cyborg.png" width="200"><br><sub>MvC2_Cyborg</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/MvC_DeathstrokeEO.png" width="200"><br><sub>MvC_DeathstrokeEO</sub></td><td align="center"><img src="previews/chars/MvC_Harley_Quinn.png" width="200"><br><sub>MvC_Harley_Quinn</sub></td><td align="center"><img src="previews/chars/Naruto_Sennin.png" width="200"><br><sub>Naruto_Sennin</sub></td><td align="center"><img src="previews/chars/Naruto_Start.png" width="200"><br><sub>Naruto_Start</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/Nightwing_MvC.png" width="200"><br><sub>Nightwing_MvC</sub></td><td align="center"><img src="previews/chars/Obito.png" width="200"><br><sub>Obito</sub></td><td align="center"><img src="previews/chars/Orochimaru.png" width="200"><br><sub>Orochimaru</sub></td><td align="center"><img src="previews/chars/Pain.png" width="200"><br><sub>Pain</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/Piccolo.png" width="200"><br><sub>Piccolo</sub></td><td align="center"><img src="previews/chars/Sasuke_Akatsuki.png" width="200"><br><sub>Sasuke_Akatsuki</sub></td><td align="center"><img src="previews/chars/Shazam_G.png" width="200"><br><sub>Shazam_G</sub></td><td align="center"><img src="previews/chars/Silver_surfer.png" width="200"><br><sub>Silver_surfer</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/Spiderman.png" width="200"><br><sub>Spiderman</sub></td><td align="center"><img src="previews/chars/Storm.png" width="200"><br><sub>Storm</sub></td><td align="center"><img src="previews/chars/Supergirl.png" width="200"><br><sub>Supergirl</sub></td><td align="center"><img src="previews/chars/Thanos.png" width="200"><br><sub>Thanos</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/TheFlashnew52.png" width="200"><br><sub>TheFlashnew52</sub></td><td align="center"><img src="previews/chars/The_Joker.png" width="200"><br><sub>The_Joker</sub></td><td align="center"><img src="previews/chars/Thor_Odinson.png" width="200"><br><sub>Thor_Odinson</sub></td><td align="center"><img src="previews/chars/Tobirama.png" width="200"><br><sub>Tobirama</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/Trunks_Future_SS.png" width="200"><br><sub>Trunks_Future_SS</sub></td><td align="center"><img src="previews/chars/Tsunade.png" width="200"><br><sub>Tsunade</sub></td><td align="center"><img src="previews/chars/Vegeta_Majin.png" width="200"><br><sub>Vegeta_Majin</sub></td><td align="center"><img src="previews/chars/Venom.png" width="200"><br><sub>Venom</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/Wolverine.png" width="200"><br><sub>Wolverine</sub></td><td align="center"><img src="previews/chars/Wonder_Woman_New52.png" width="200"><br><sub>Wonder_Woman_New52</sub></td><td align="center"><img src="previews/chars/bane.png" width="200"><br><sub>bane</sub></td><td align="center"><img src="previews/chars/blackadam.png" width="200"><br><sub>blackadam</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/doomsday.png" width="200"><br><sub>doomsday</sub></td><td align="center"><img src="previews/chars/superman.png" width="200"><br><sub>superman</sub></td></tr>
+</table>
+
+## Stages (18)
+
+<table>
+<tr><td align="center"><img src="previews/stages/Academia_Ninja.png" width="260"><br><sub>Academia_Ninja</sub></td><td align="center"><img src="previews/stages/AvengersDay_1.1Zoom.png" width="260"><br><sub>AvengersDay_1.1Zoom</sub></td><td align="center"><img src="previews/stages/Campo3.png" width="260"><br><sub>Campo3</sub></td></tr>
+<tr><td align="center"><img src="previews/stages/DarkCerebro-X3TOG%28GBA%29_1.1Zoom.png" width="260"><br><sub>DarkCerebro-X3TOG(GBA)_1.1Zoom</sub></td><td align="center"><img src="previews/stages/Examendechunnin.png" width="260"><br><sub>Examendechunnin</sub></td><td align="center"><img src="previews/stages/Gotham-City.png" width="260"><br><sub>Gotham-City</sub></td></tr>
+<tr><td align="center"><img src="previews/stages/Grand_Fisher_Stage.png" width="260"><br><sub>Grand_Fisher_Stage</sub></td><td align="center"><img src="previews/stages/Hall_of_Justice.png" width="260"><br><sub>Hall_of_Justice</sub></td><td align="center"><img src="previews/stages/HydraAircraftBase_1.1Zoom.png" width="260"><br><sub>HydraAircraftBase_1.1Zoom</sub></td></tr>
+<tr><td align="center"><img src="previews/stages/KryptonDestroyed.png" width="260"><br><sub>KryptonDestroyed</sub></td><td align="center"><img src="previews/stages/LTDsLexcorpDemolished.png" width="260"><br><sub>LTDsLexcorpDemolished</sub></td><td align="center"><img src="previews/stages/OscorpLab_1.1Zoom.png" width="260"><br><sub>OscorpLab_1.1Zoom</sub></td></tr>
+<tr><td align="center"><img src="previews/stages/WayneManorRuins_1.1Zoom.png" width="260"><br><sub>WayneManorRuins_1.1Zoom</sub></td><td align="center"><img src="previews/stages/dbcity.png" width="260"><br><sub>dbcity</sub></td><td align="center"><img src="previews/stages/dbnamek.png" width="260"><br><sub>dbnamek</sub></td></tr>
+<tr><td align="center"><img src="previews/stages/dbz_kame_house.png" width="260"><br><sub>dbz_kame_house</sub></td><td align="center"><img src="previews/stages/tenkaichiHR.png" width="260"><br><sub>tenkaichiHR</sub></td><td align="center"><img src="previews/stages/xmagneto.png" width="260"><br><sub>xmagneto</sub></td></tr>
+</table>
