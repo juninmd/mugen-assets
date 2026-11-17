@@ -15,4 +15,4 @@ jobs:
     uses: juninmd/base-actions/.github/workflows/reusable-sast.yml@main
     with:
       # Relatorio no primeiro ciclo; aperte para true depois do triage.
-      fail-semgrep: false
+      fail-semgrep: true
