@@ -19,3 +19,5 @@ jobs:
           python-version: "3.12"
       - name: Every char/stage zip has a preview
         run: python tools/check_previews.py
+      - name: Unit tests for the checker
+        run: python -m unittest discover -s tools -p "test_*.py"
