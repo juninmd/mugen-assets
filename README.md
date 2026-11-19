@@ -9,7 +9,7 @@ Personagens e stages MUGEN empacotados em `.zip` para o [ultimate-mugen](https:/
 
 ## Adicionar conteúdo
 
-Todo zip em `chars/` ou `stages/` precisa de uma print em `previews/<chars|stages>/<mesmo nome>.png`. O CI (`tools/check_previews.py`) bloqueia o PR se faltar.
+Todo zip em `chars/` ou `stages/` precisa de uma print em `previews/<chars|stages>/<mesmo nome>.png`. O CI (`tools/check_previews.py`) bloqueia o PR se faltar print, se o zip estiver corrompido, se não seguir o layout acima ou se tiver caminhos absolutos/`..`.
 
 ```bash
 pip install pillow numpy

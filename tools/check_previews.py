@@ -1,8 +1,30 @@
-"""Fail if any chars/stages zip lacks a PNG preview in previews/, or a preview has no zip."""
+"""Fail if any chars/stages zip lacks a PNG preview in previews/, or a preview has no zip.
+
+Also checks that each zip is readable, follows the layout documented in the README
+(chars: <Name>/<Name>.def; stages: stages/*.def) and has no absolute or ".." paths.
+"""
 import os
 import sys
+import zipfile
 
 PNG_SIG = b"\x89PNG\r\n\x1a\n"
+
+
+def zip_problems(path, kind, name):
+    try:
+        with zipfile.ZipFile(path) as zf:
+            names = zf.namelist()
+    except (zipfile.BadZipFile, OSError) as e:
+        return [f"unreadable zip: {kind}/{name}.zip ({e})"]
+    out = []
+    for n in names:
+        if n.startswith(("/", "\\")) or ".." in n.replace("\\", "/").split("/"):
+            out.append(f"unsafe path in {kind}/{name}.zip: {n}")
+    if kind == "chars" and f"{name}/{name}.def" not in names:
+        out.append(f"layout: {kind}/{name}.zip has no {name}/{name}.def")
+    if kind == "stages" and not any(n.startswith("stages/") and n.lower().endswith(".def") for n in names):
+        out.append(f"layout: {kind}/{name}.zip has no stages/*.def")
+    return out
 
 
 def problems(root):
@@ -11,6 +33,8 @@ def problems(root):
         zips = {f[:-4] for f in os.listdir(os.path.join(root, kind)) if f.lower().endswith(".zip")}
         pdir = os.path.join(root, "previews", kind)
         pngs = {f[:-4] for f in os.listdir(pdir) if f.endswith(".png")} if os.path.isdir(pdir) else set()
+        for name in sorted(zips):
+            out.extend(zip_problems(os.path.join(root, kind, name + ".zip"), kind, name))
         for name in sorted(zips - pngs):
             out.append(f"missing preview: previews/{kind}/{name}.png (for {kind}/{name}.zip)")
         for name in sorted(pngs - zips):
