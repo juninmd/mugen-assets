@@ -32,6 +32,21 @@ class Pack:
                 return self.zf.read(self.names[key])
         return None
 
+    def require(self, what, *candidates):
+        data = self.read(*candidates)
+        if data is None:
+            raise ValueError("missing %s: %s" % (what, candidates[0]))
+        return data
+
+    def close(self):
+        self.zf.close()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        self.close()
+
 
 def parse_def(text):
     """Return list of (section, {key: value}) preserving order."""
@@ -74,7 +89,7 @@ def char_card(pack, zip_name):
         raise ValueError("missing %s/%s.def" % (name, name))
     secs = dict(parse_def(raw.decode("latin-1")))
     files, info = secs.get("files", {}), secs.get("info", {})
-    sff = SFF(pack.read(f"{name}/{files.get('sprite', '')}"))
+    sff = SFF(pack.require("sprite file", f"{name}/{files.get('sprite', '')}"))
     act = pack.read(f"{name}/{files['pal1']}") if files.get("pal1") else None
     pal = read_act(act) if act and sff.version == 1 else None
 
@@ -127,7 +142,7 @@ def stage_card(pack, zip_name):
     w, h = (int(v) for v in nums(sd.get("stageinfo", {}).get("localcoord"), (320, 240))[:2])
     bgdef = next((kv for s, kv in secs if s == "bgdef"), {})
     sprpath = bgdef.get("spr", "")
-    sff = SFF(pack.read(sprpath, "stages/" + sprpath, "stages/" + os.path.basename(sprpath)))
+    sff = SFF(pack.require("stage sprite file", sprpath, "stages/" + sprpath, "stages/" + os.path.basename(sprpath)))
     acts = anim_frames(text)
     canvas = np.zeros((h, w, 3), np.float32)
     elems = [kv for s, kv in secs if s.startswith("bg ") or (s.startswith("bg") and s != "bgdef" and "type" in kv)]
@@ -201,7 +216,8 @@ def main(paths):
         kind = os.path.basename(os.path.dirname(os.path.abspath(path)))
         zip_name = os.path.basename(path)
         try:
-            card = (char_card if kind == "chars" else stage_card)(Pack(path), zip_name)
+            with Pack(path) as pack:
+                card = (char_card if kind == "chars" else stage_card)(pack, zip_name)
         except Exception as e:  # report and continue with the next pack
             print("FAIL %s: %s" % (path, e))
             failed += 1
