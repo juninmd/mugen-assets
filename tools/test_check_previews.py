@@ -49,5 +49,44 @@ class CheckZips(unittest.TestCase):
             self.assertTrue(any("unreadable zip" in p for p in check_previews.problems(root)))
 
 
+class CheckUmf(unittest.TestCase):
+    def build(self, root, zip_members, folder_files):
+        os.makedirs(os.path.join(root, "umf", "Hero"), exist_ok=True)
+        for rel, data in folder_files.items():
+            full = os.path.join(root, "umf", "Hero", rel)
+            os.makedirs(os.path.dirname(full), exist_ok=True)
+            with open(full, "wb") as f:
+                f.write(data)
+        with zipfile.ZipFile(os.path.join(root, "umf", "Hero.zip"), "w") as zf:
+            for arc, data in zip_members.items():
+                zf.writestr(arc, data)
+        os.makedirs(os.path.join(root, "previews", "umf"), exist_ok=True)
+        with open(os.path.join(root, "previews", "umf", "Hero.png"), "wb") as f:
+            f.write(PNG)
+        for k in ("chars", "stages"):
+            os.makedirs(os.path.join(root, k), exist_ok=True)
+        return check_previews.problems(root)
+
+    def test_valid_umf_pack(self):
+        files = {"hero.json": b'{"format":"umf/2"}', "sprites/01_idle.png": b"png"}
+        with tempfile.TemporaryDirectory() as root:
+            zipped = {"Hero/" + k: v for k, v in files.items()}
+            self.assertEqual(self.build(root, zipped, files), [])
+
+    def test_stale_zip_and_bad_format(self):
+        files = {"hero.json": b'{"format":"umf/2"}', "sprites/01_idle.png": b"png"}
+        with tempfile.TemporaryDirectory() as root:
+            zipped = {"Hero/hero.json": b'{"format":"nope"}', "Hero/sprites/01_idle.png": b"png"}
+            probs = self.build(root, zipped, files)
+            self.assertTrue(any("not a umf fighter" in p for p in probs))
+            self.assertTrue(any("stale zip" in p for p in probs))
+
+    def test_missing_idle_sprite(self):
+        files = {"hero.json": b'{"format":"umf/2"}'}
+        with tempfile.TemporaryDirectory() as root:
+            probs = self.build(root, {"Hero/hero.json": files["hero.json"]}, files)
+            self.assertTrue(any("01_idle.png" in p for p in probs))
+
+
 if __name__ == "__main__":
     unittest.main()

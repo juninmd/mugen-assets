@@ -3,6 +3,8 @@
 Usage: python tools/preview.py chars/Foo.zip stages/Bar.zip ...
 Writes previews/<chars|stages>/<zip name>.png next to the repository root.
 """
+import io
+import json
 import os
 import re
 import sys
@@ -119,6 +121,29 @@ def char_card(pack, zip_name):
     return card
 
 
+def umf_card(pack, zip_name):
+    name = os.path.splitext(zip_name)[0]
+    names = [n for n in pack.names if n.startswith(name.lower() + "/") and n.count("/") == 1 and n.endswith(".json")]
+    title = name
+    if names:
+        title = json.loads(pack.read(names[0])).get("name", name)
+    idle_raw = pack.require("idle sprite", f"{name}/sprites/01_idle.png")
+    idle = Image.open(io.BytesIO(idle_raw)).convert("RGBA")
+    portrait_raw = pack.read(f"{name}/sprites/portrait.png")
+    card = Image.new("RGBA", CARD, (18, 20, 32, 255))
+    grad = np.linspace(40, 10, CARD[1], dtype=np.uint8)[:, None]
+    card.paste(Image.fromarray(np.dstack([grad.repeat(CARD[0], 1)] * 3 + [np.full((CARD[1], CARD[0]), 255, np.uint8)])))
+    if portrait_raw:
+        p = fit(Image.open(io.BytesIO(portrait_raw)).convert("RGBA"), (180, 220))
+        card.alpha_composite(p, (16, 20 + (220 - p.height) // 2))
+    i = fit(idle, (260, 220))
+    card.alpha_composite(i, (200 + (264 - i.width) // 2, 230 - i.height))
+    d = ImageDraw.Draw(card)
+    d.rectangle((0, 238, CARD[0], CARD[1]), fill=(0, 0, 0, 200))
+    d.text((12, 242), title, fill=(255, 255, 255, 255), font=font(18))
+    return card
+
+
 def anim_frames(text):
     acts, cur = {}, None
     for line in text.splitlines():
@@ -217,7 +242,7 @@ def main(paths):
         zip_name = os.path.basename(path)
         try:
             with Pack(path) as pack:
-                card = (char_card if kind == "chars" else stage_card)(pack, zip_name)
+                card = {"chars": char_card, "umf": umf_card}.get(kind, stage_card)(pack, zip_name)
         except Exception as e:  # report and continue with the next pack
             print("FAIL %s: %s" % (path, e))
             failed += 1
