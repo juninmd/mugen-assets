@@ -7,9 +7,11 @@ Personagens e stages MUGEN empacotados em `.zip` para o [ultimate-mugen](https:/
 - `chars/<Nome>.zip` contém `<Nome>/<Nome>.def` e os arquivos do personagem.
 - `stages/<Nome>.zip` usa caminhos relativos à raiz do MUGEN: `stages/*.def`, `stages/*.sff` e `sound/*` (música, quando existe).
 
+- `umf/<Nome>/` é um lutador `umf/2` do ultimate-mugen: `<id>.json` mais `sprites/*.png` (poses, `meta.json` e `01_idle.png`). `umf/<Nome>.zip` é gerado por `python tools/pack_umf.py <Nome>` e o CI confere que o zip bate com a pasta.
+
 ## Adicionar conteúdo
 
-Todo zip em `chars/` ou `stages/` precisa de uma print em `previews/<chars|stages>/<mesmo nome>.png`. O CI (`tools/check_previews.py`) bloqueia o PR se faltar print, se o zip estiver corrompido, se não seguir o layout acima ou se tiver caminhos absolutos/`..`.
+Todo zip em `chars/`, `stages/` ou `umf/` precisa de uma print em `previews/<chars|stages|umf>/<mesmo nome>.png`. O CI (`tools/check_previews.py`) bloqueia o PR se faltar print, se o zip estiver corrompido, se não seguir o layout acima ou se tiver caminhos absolutos/`..`.
 
 ```bash
 pip install pillow numpy
@@ -62,4 +64,10 @@ Personagens e stages pertencem aos seus autores originais (veja o readme dentro 
 <tr><td align="center"><img src="previews/stages/KryptonDestroyed.png" width="260"><br><sub>KryptonDestroyed</sub></td><td align="center"><img src="previews/stages/LTDsLexcorpDemolished.png" width="260"><br><sub>LTDsLexcorpDemolished</sub></td><td align="center"><img src="previews/stages/OscorpLab_1.1Zoom.png" width="260"><br><sub>OscorpLab_1.1Zoom</sub></td></tr>
 <tr><td align="center"><img src="previews/stages/WayneManorRuins_1.1Zoom.png" width="260"><br><sub>WayneManorRuins_1.1Zoom</sub></td><td align="center"><img src="previews/stages/dbcity.png" width="260"><br><sub>dbcity</sub></td><td align="center"><img src="previews/stages/dbnamek.png" width="260"><br><sub>dbnamek</sub></td></tr>
 <tr><td align="center"><img src="previews/stages/dbz_kame_house.png" width="260"><br><sub>dbz_kame_house</sub></td><td align="center"><img src="previews/stages/tenkaichiHR.png" width="260"><br><sub>tenkaichiHR</sub></td><td align="center"><img src="previews/stages/xmagneto.png" width="260"><br><sub>xmagneto</sub></td></tr>
+</table>
+
+## Lutadores UMF (1)
+
+<table>
+<tr><td align="center"><img src="previews/umf/Goku_SSJ4_UMF.png" width="260"><br><sub>Goku_SSJ4_UMF</sub></td></tr>
 </table>
