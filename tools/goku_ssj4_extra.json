@@ -1,0 +1,1316 @@
+{
+ "moves": [
+  {
+   "id": "instant_step",
+   "name": "Instant Transmission",
+   "input": "~B, F, x",
+   "kind": "special",
+   "anim": "tideStep",
+   "teleport": 4,
+   "invuln": [
+    1,
+    3
+   ],
+   "cost": 200,
+   "hits": [
+    {
+     "at": 5,
+     "damage": 58,
+     "level": "heavy",
+     "pausetime": [
+      11,
+      12
+     ],
+     "knockback": [
+      -4,
+      0
+     ]
+    }
+   ],
+   "cancels": [
+    "fireballb",
+    "airkamehameha"
+   ]
+  },
+  {
+   "id": "flurry",
+   "name": "Meteor Rush",
+   "input": "~B, F, a",
+   "kind": "special",
+   "simple": "sp3",
+   "anim": "flurry",
+   "moves": [
+    {
+     "at": 1,
+     "vel": [
+      3.4,
+      0
+     ]
+    },
+    {
+     "at": 7,
+     "vel": [
+      0.6,
+      0
+     ]
+    }
+   ],
+   "hits": [
+    {
+     "at": 2,
+     "damage": 20,
+     "level": "light",
+     "pausetime": [
+      4,
+      5
+     ],
+     "knockback": [
+      -0.3,
+      0
+     ]
+    },
+    {
+     "at": 3,
+     "damage": 20,
+     "level": "light",
+     "pausetime": [
+      4,
+      5
+     ],
+     "knockback": [
+      -0.3,
+      0
+     ]
+    },
+    {
+     "at": 4,
+     "damage": 20,
+     "level": "light",
+     "pausetime": [
+      4,
+      5
+     ],
+     "knockback": [
+      -0.3,
+      0
+     ]
+    },
+    {
+     "at": 5,
+     "damage": 20,
+     "level": "light",
+     "pausetime": [
+      4,
+      5
+     ],
+     "knockback": [
+      -0.3,
+      0
+     ]
+    },
+    {
+     "at": 6,
+     "damage": 20,
+     "level": "light",
+     "pausetime": [
+      4,
+      5
+     ],
+     "knockback": [
+      -0.3,
+      0
+     ]
+    },
+    {
+     "at": 7,
+     "damage": 40,
+     "level": "heavy",
+     "pausetime": [
+      11,
+      12
+     ],
+     "knockback": [
+      -4,
+      -6
+     ],
+     "launch": true
+    }
+   ]
+  },
+  {
+   "id": "dragon_rise",
+   "name": "Dragon Rise",
+   "input": "~F, D, DF, b",
+   "kind": "special",
+   "anim": "uppercut",
+   "hits": [
+    {
+     "at": 5,
+     "damage": 102,
+     "level": "heavy",
+     "pausetime": [
+      8,
+      7
+     ],
+     "launch": true,
+     "knockback": [
+      -8,
+      -7
+     ]
+    }
+   ],
+   "cancels": [
+    "airkamehameha"
+   ]
+  },
+  {
+   "id": "dash_strike",
+   "name": "Dash Strike",
+   "input": "~F, D, DF, a",
+   "kind": "special",
+   "anim": "dashStrike",
+   "moves": [
+    {
+     "at": 1,
+     "vel": [
+      5,
+      0
+     ]
+    }
+   ],
+   "hits": [
+    {
+     "at": 1,
+     "damage": 40,
+     "level": "medium",
+     "pausetime": [
+      11,
+      11
+     ],
+     "knockback": [
+      -5,
+      0
+     ]
+    }
+   ],
+   "cancels": [
+    "fireballb"
+   ]
+  },
+  {
+   "id": "ki_volley",
+   "name": "Ki Volley",
+   "input": "~D, DB, B, y",
+   "kind": "special",
+   "anim": "fireballCast",
+   "projectile": {
+    "at": 3,
+    "anim": "fireballFx",
+    "hitAnim": "fireballHit",
+    "speed": [
+     5,
+     -1.4
+    ],
+    "offset": [
+     38,
+     -60
+    ],
+    "damage": 30,
+    "hits": 2,
+    "removeTime": 100
+   }
+  },
+  {
+   "id": "escape_burst",
+   "name": "Ki Burst",
+   "input": "x+a+b",
+   "kind": "special",
+   "when": "stand",
+   "anim": "strong",
+   "cost": 500,
+   "burst": true,
+   "invuln": [
+    1,
+    3
+   ],
+   "hits": [
+    {
+     "at": 3,
+     "damage": 30,
+     "level": "heavy",
+     "launch": true,
+     "knockback": [
+      -6,
+      -4
+     ],
+     "hitstop": 12
+    }
+   ],
+   "cancels": []
+  },
+  {
+   "id": "jab2",
+   "name": "Rapid Jab",
+   "input": "x",
+   "kind": "normal",
+   "anim": "chain_jab2",
+   "hits": [
+    {
+     "at": 2,
+     "damage": 23,
+     "level": "light",
+     "knockback": [
+      -0.6,
+      0
+     ]
+    }
+   ],
+   "moves": [
+    {
+     "at": 1,
+     "vel": [
+      0.4,
+      0
+     ]
+    },
+    {
+     "at": 3,
+     "vel": [
+      0.2,
+      0
+     ]
+    }
+   ],
+   "cancels": [],
+   "rekka": {
+    "after": [
+     "x"
+    ],
+    "window": [
+     1,
+     20
+    ],
+    "contact": true
+   }
+  },
+  {
+   "id": "jab3",
+   "name": "Triple Jab",
+   "input": "x",
+   "kind": "normal",
+   "anim": "chain_jab3",
+   "hits": [
+    {
+     "at": 2,
+     "damage": 76,
+     "level": "medium",
+     "knockback": [
+      -3,
+      0
+     ]
+    }
+   ],
+   "moves": [
+    {
+     "at": 1,
+     "vel": [
+      0.4,
+      0
+     ]
+    },
+    {
+     "at": 3,
+     "vel": [
+      0.2,
+      0
+     ]
+    }
+   ],
+   "cancels": [],
+   "rekka": {
+    "after": [
+     "jab2"
+    ],
+    "window": [
+     1,
+     13
+    ],
+    "contact": true
+   }
+  },
+  {
+   "id": "lkick2",
+   "name": "Quick Kick",
+   "input": "a",
+   "kind": "normal",
+   "anim": "chain_lkick2",
+   "hits": [
+    {
+     "at": 2,
+     "damage": 25,
+     "level": "light",
+     "knockback": [
+      -0.6,
+      0
+     ]
+    }
+   ],
+   "moves": [
+    {
+     "at": 1,
+     "vel": [
+      0.4,
+      0
+     ]
+    },
+    {
+     "at": 3,
+     "vel": [
+      0.2,
+      0
+     ]
+    }
+   ],
+   "cancels": [],
+   "rekka": {
+    "after": [
+     "a"
+    ],
+    "window": [
+     1,
+     20
+    ],
+    "contact": true
+   }
+  },
+  {
+   "id": "lkick3",
+   "name": "Rising Kick",
+   "input": "a",
+   "kind": "normal",
+   "anim": "chain_lkick3",
+   "hits": [
+    {
+     "at": 2,
+     "damage": 59,
+     "level": "medium",
+     "knockback": [
+      -3.5,
+      0
+     ]
+    }
+   ],
+   "moves": [
+    {
+     "at": 1,
+     "vel": [
+      0.4,
+      0
+     ]
+    },
+    {
+     "at": 3,
+     "vel": [
+      0.2,
+      0
+     ]
+    }
+   ],
+   "cancels": [],
+   "rekka": {
+    "after": [
+     "lkick2"
+    ],
+    "window": [
+     1,
+     14
+    ],
+    "contact": true
+   }
+  },
+  {
+   "id": "strong2",
+   "name": "Follow-up Strike",
+   "input": "y",
+   "kind": "normal",
+   "anim": "chain_strong2",
+   "hits": [
+    {
+     "at": 2,
+     "damage": 71,
+     "level": "medium",
+     "knockback": [
+      -4,
+      0
+     ]
+    }
+   ],
+   "moves": [
+    {
+     "at": 1,
+     "vel": [
+      0.4,
+      0
+     ]
+    },
+    {
+     "at": 3,
+     "vel": [
+      0.2,
+      0
+     ]
+    }
+   ],
+   "cancels": [],
+   "rekka": {
+    "after": [
+     "y"
+    ],
+    "window": [
+     5,
+     32
+    ],
+    "contact": true
+   }
+  },
+  {
+   "id": "cjab2",
+   "name": "Low Rapid Jab",
+   "input": "x",
+   "kind": "normal",
+   "anim": "chain_cjab2",
+   "hits": [
+    {
+     "at": 2,
+     "damage": 22,
+     "level": "light",
+     "knockback": [
+      -0.5,
+      0
+     ]
+    }
+   ],
+   "when": "crouch",
+   "cancels": [],
+   "rekka": {
+    "after": [
+     "crouch_x"
+    ],
+    "window": [
+     1,
+     19
+    ],
+    "contact": true
+   }
+  },
+  {
+   "id": "ajab2",
+   "name": "Air Rapid Jab",
+   "input": "x",
+   "kind": "normal",
+   "anim": "chain_ajab2",
+   "hits": [
+    {
+     "at": 2,
+     "damage": 31,
+     "level": "light",
+     "guard": "high"
+    }
+   ],
+   "when": "air",
+   "cancels": [],
+   "rekka": {
+    "after": [
+     "air_x"
+    ],
+    "window": [
+     1,
+     20
+    ],
+    "contact": true
+   }
+  },
+  {
+   "id": "string_a",
+   "name": "Knuckle Salute",
+   "input": "B+x",
+   "kind": "normal",
+   "anim": "stringA",
+   "hits": [
+    {
+     "at": 3,
+     "damage": 54,
+     "level": "medium",
+     "knockback": [
+      -0.5,
+      0
+     ]
+    },
+    {
+     "at": 5,
+     "damage": 26,
+     "level": "light"
+    }
+   ],
+   "moves": [
+    {
+     "at": 1,
+     "vel": [
+      2,
+      0
+     ]
+    },
+    {
+     "at": 5,
+     "vel": [
+      0.5,
+      0
+     ]
+    }
+   ],
+   "cancels": [
+    "string_b",
+    "string_c"
+   ]
+  },
+  {
+   "id": "string_b",
+   "name": "Rhythm Kick",
+   "input": "B+z",
+   "kind": "normal",
+   "anim": "stringB",
+   "hits": [
+    {
+     "at": 2,
+     "damage": 22,
+     "level": "light",
+     "knockback": [
+      -0.5,
+      0
+     ]
+    },
+    {
+     "at": 5,
+     "damage": 58,
+     "level": "medium"
+    }
+   ],
+   "moves": [
+    {
+     "at": 1,
+     "vel": [
+      1.5,
+      0
+     ]
+    },
+    {
+     "at": 5,
+     "vel": [
+      0.5,
+      0
+     ]
+    }
+   ],
+   "cancels": [
+    "string_c"
+   ]
+  },
+  {
+   "id": "string_c",
+   "name": "Cross Finisher",
+   "input": "B+y",
+   "kind": "normal",
+   "anim": "stringC",
+   "hits": [
+    {
+     "at": 3,
+     "damage": 98,
+     "level": "heavy",
+     "wallBounce": true,
+     "knockback": [
+      -5,
+      -2
+     ],
+     "hitstun": 22
+    }
+   ],
+   "moves": [
+    {
+     "at": 1,
+     "vel": [
+      2.5,
+      0
+     ]
+    },
+    {
+     "at": 3,
+     "vel": [
+      0.5,
+      0
+     ]
+    }
+   ],
+   "cancels": []
+  },
+  {
+   "id": "overhead",
+   "name": "Overhead Smash",
+   "input": "x+b",
+   "kind": "normal",
+   "anim": "hkick",
+   "hits": [
+    {
+     "at": 3,
+     "damage": 74.1,
+     "level": "medium",
+     "launch": true,
+     "knockback": [
+      -3,
+      -7
+     ],
+     "guard": "high",
+     "hitstun": 20
+    }
+   ],
+   "cancels": []
+  },
+  {
+   "id": "launcher",
+   "name": "Launcher",
+   "input": "DF+y",
+   "kind": "normal",
+   "when": "crouch",
+   "anim": "uppercut",
+   "hits": [
+    {
+     "at": 3,
+     "damage": 58,
+     "level": "heavy",
+     "launch": true,
+     "hitstun": 22,
+     "knockback": [
+      -1,
+      -6
+     ]
+    }
+   ],
+   "cancels": []
+  },
+  {
+   "id": "divekick",
+   "name": "Dive Kick",
+   "input": "D+y",
+   "kind": "normal",
+   "anim": "akick",
+   "when": "air",
+   "hits": [
+    {
+     "at": 2,
+     "damage": 77,
+     "level": "heavy",
+     "guard": "high",
+     "groundBounce": true,
+     "launch": true,
+     "knockback": [
+      -1,
+      4
+     ]
+    }
+   ],
+   "moves": [
+    {
+     "at": 1,
+     "vel": [
+      1.8,
+      2.5
+     ]
+    }
+   ],
+   "cancels": []
+  },
+  {
+   "id": "slide",
+   "name": "Ground Slide",
+   "input": "DF+a",
+   "kind": "normal",
+   "anim": "sweep",
+   "when": "stand",
+   "hits": [
+    {
+     "at": 2,
+     "damage": 51,
+     "level": "heavy",
+     "guard": "low",
+     "launch": true,
+     "knockback": [
+      -2,
+      -5
+     ]
+    }
+   ],
+   "moves": [
+    {
+     "at": 1,
+     "vel": [
+      3,
+      0
+     ]
+    },
+    {
+     "at": 3,
+     "vel": [
+      1.2,
+      0
+     ]
+    }
+   ],
+   "cancels": []
+  }
+ ],
+ "anims": {
+  "akick": {
+   "frames": [
+    "s610_0*7",
+    {
+     "pose": "s610_1",
+     "ticks": 14,
+     "hit": {
+      "part": "footF",
+      "radius": 12
+     }
+    },
+    "s610_0*7"
+   ]
+  },
+  "chain_ajab2": {
+   "frames": [
+    "s600_0*7",
+    {
+     "pose": "s600_1",
+     "ticks": 6,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    {
+     "pose": "s600_2",
+     "ticks": -1,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    }
+   ]
+  },
+  "chain_cjab2": {
+   "frames": [
+    "s410_0*6",
+    {
+     "pose": "s410_1",
+     "ticks": 12,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    "s410_0*6"
+   ]
+  },
+  "chain_jab2": {
+   "frames": [
+    "s201_0*4",
+    {
+     "pose": "s201_1",
+     "ticks": 11,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    "s201_0*2"
+   ]
+  },
+  "chain_jab3": {
+   "frames": [
+    "s201_0*4",
+    {
+     "pose": "s201_1",
+     "ticks": 11,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    "s201_0*2"
+   ]
+  },
+  "chain_lkick2": {
+   "frames": [
+    "s230_0*9",
+    {
+     "pose": "s230_1",
+     "ticks": 15,
+     "hit": {
+      "part": "footF",
+      "radius": 12
+     }
+    },
+    "s11_0*4"
+   ]
+  },
+  "chain_lkick3": {
+   "frames": [
+    "s230_0*9",
+    {
+     "pose": "s230_1",
+     "ticks": 15,
+     "hit": {
+      "part": "footF",
+      "radius": 12
+     }
+    },
+    "s11_0*4"
+   ]
+  },
+  "chain_strong2": {
+   "frames": [
+    "s210_0*5",
+    {
+     "pose": "s210_1",
+     "ticks": 13,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    "s210_0*9"
+   ]
+  },
+  "dashStrike": {
+   "frames": [
+    {
+     "pose": "s200_1",
+     "ticks": 7,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    {
+     "pose": "s200_1",
+     "ticks": 7,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    {
+     "pose": "s200_1",
+     "ticks": 7,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    {
+     "pose": "s200_1",
+     "ticks": 7,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    }
+   ]
+  },
+  "dragonFist": {
+   "frames": [
+    "s200_0*3",
+    {
+     "pose": "s200_0",
+     "ticks": 4,
+     "offset": [
+      -5,
+      0
+     ]
+    }
+   ]
+  },
+  "fireballCast": {
+   "frames": [
+    "s201_0*7",
+    "s1222_0*30",
+    "s201_0*1"
+   ]
+  },
+  "fireballFx": {
+   "frames": [
+    "s1005_0*2",
+    "s1005_1*2"
+   ],
+   "loop": 0
+  },
+  "fireballHit": {
+   "frames": [
+    "s1009_0*8",
+    "s1009_1*7",
+    "s1009_2*6",
+    "s1009_3*5",
+    "s1009_4*4",
+    "s1009_5*3",
+    "s1009_6*3"
+   ],
+   "loop": 0
+  },
+  "flurry": {
+   "frames": [
+    "s200_0*4",
+    {
+     "pose": "s200_1",
+     "ticks": 4,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    "s201_0*4",
+    {
+     "pose": "s201_1",
+     "ticks": 4,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    "s201_0*4",
+    "s230_0*4",
+    {
+     "pose": "s230_1",
+     "ticks": 4,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    "s230_0*4",
+    {
+     "pose": "s240_0",
+     "ticks": 4,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    "s210_0*8",
+    {
+     "pose": "s210_1",
+     "ticks": 4,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    "s230_0*4",
+    {
+     "pose": "s230_1",
+     "ticks": 4,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    {
+     "pose": "s240_0",
+     "ticks": 11,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    }
+   ]
+  },
+  "hkick": {
+   "frames": [
+    "s230_0*9",
+    {
+     "pose": "s240_0",
+     "ticks": 15,
+     "hit": {
+      "part": "footF",
+      "radius": 12
+     }
+    },
+    "s11_0*4"
+   ]
+  },
+  "jab": {
+   "frames": [
+    "s201_0*4",
+    {
+     "pose": "s201_1",
+     "ticks": 11,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    "s201_0*2"
+   ]
+  },
+  "kameCast": {
+   "frames": [
+    "s1700_0*9",
+    "s1700_1*4",
+    "s1700_0*5",
+    "s1700_2*4",
+    "s1700_0*5",
+    "s1700_3*4",
+    "s1700_0*5",
+    "s1700_5*-1"
+   ]
+  },
+  "kameFx": {
+   "frames": [
+    "s1800_5*5",
+    "s1800_4*5",
+    "s1800_3*14",
+    "s1800_2*14",
+    "s1800_3*14",
+    "s1800_2*11",
+    "s1800_3*14",
+    "s1800_3*14",
+    "s1800_4*14",
+    "s1800_4*14",
+    "s1800_5*14",
+    "s1800_5*-1"
+   ],
+   "loop": 0
+  },
+  "stringA": {
+   "frames": [
+    "s210_0*5",
+    {
+     "pose": "s210_1",
+     "ticks": 13,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    "s210_0*9"
+   ]
+  },
+  "stringB": {
+   "frames": [
+    "s230_0*9",
+    {
+     "pose": "s240_0",
+     "ticks": 15,
+     "hit": {
+      "part": "footF",
+      "radius": 12
+     }
+    },
+    "s11_0*4"
+   ]
+  },
+  "stringC": {
+   "frames": [
+    "s210_0*5",
+    {
+     "pose": "s210_1",
+     "ticks": 13,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    "s210_0*9"
+   ]
+  },
+  "strong": {
+   "frames": [
+    "s210_0*5",
+    {
+     "pose": "s210_1",
+     "ticks": 13,
+     "hit": {
+      "part": "handF",
+      "radius": 12
+     }
+    },
+    "s210_0*9"
+   ]
+  },
+  "sweep": {
+   "frames": [
+    "s202_0*4",
+    {
+     "pose": "s202_1",
+     "ticks": 11,
+     "hit": {
+      "part": "footF",
+      "radius": 12
+     }
+    },
+    "s202_0*3"
+   ]
+  },
+  "tideStep": {
+   "frames": [
+    "s7500_0*6",
+    "s7500_0*3",
+    "s7500_0*3",
+    "s7500_0*6",
+    "s7500_0*3",
+    "s7500_0*3"
+   ]
+  },
+  "uppercut": {
+   "frames": [
+    "s200_0*3",
+    "s200_0*4",
+    "s200_1*4",
+    "s200_1*2",
+    {
+     "pose": "s200_1",
+     "ticks": 5,
+     "hit": {
+      "part": "footF",
+      "radius": 12
+     }
+    },
+    {
+     "pose": "s200_1",
+     "ticks": 4,
+     "hit": {
+      "part": "footF",
+      "radius": 12
+     }
+    },
+    "s200_1*4",
+    "s200_1*4",
+    "s200_1*4",
+    "s200_0*4",
+    "s200_0*4",
+    "s200_0*2"
+   ]
+  }
+ },
+ "abilities": {
+  "forms": [
+   {
+    "id": "goku_ssj4_limit",
+    "name": "Limit Breaker",
+    "cost": 1000,
+    "attack": 1.25,
+    "defense": 1.2,
+    "moves": [
+     {
+      "id": "limit_kame",
+      "name": "Limit Kamehameha",
+      "input": "~D, DB, B, F, a+b",
+      "kind": "special",
+      "anim": "kameCast",
+      "cost": 300,
+      "projectile": {
+       "at": 6,
+       "anim": "kameFx",
+       "hitAnim": "fireballHit",
+       "speed": [
+        6,
+        0
+       ],
+       "offset": [
+        46,
+        -62
+       ],
+       "damage": 26,
+       "hits": 6,
+       "level": "heavy",
+       "priority": 4,
+       "removeTime": 70
+      }
+     }
+    ],
+    "replaceMoves": false
+   }
+  ],
+  "fly": {
+   "speed": 3.8,
+   "input": "b+c",
+   "anim": "a3001",
+   "upAnim": "a3011",
+   "downAnim": "a3111",
+   "backAnim": "a3113",
+   "fwdAnim": "a3112",
+   "cost": 40
+  }
+ },
+ "helpers": {
+  "clones": {
+   "id": 7100,
+   "name": "Afterimage",
+   "input": "F, B, F",
+   "count": 1,
+   "maxActive": 1,
+   "cost": 500,
+   "duration": 300,
+   "spawnOffset": [
+    46,
+    0
+   ],
+   "walkSpeed": 3.6,
+   "attackRange": 40,
+   "oneHitPoof": true,
+   "idleAnim": "idle",
+   "walkAnim": "walk",
+   "poofAnim": "idle",
+   "attacks": [
+    {
+     "id": "shade_jab",
+     "name": "Shade Punch",
+     "input": "x",
+     "kind": "normal",
+     "anim": "jab",
+     "hits": [
+      {
+       "at": 2,
+       "damage": 22,
+       "level": "light",
+       "pausetime": [
+        6,
+        7
+       ]
+      }
+     ]
+    },
+    {
+     "id": "shade_kick",
+     "name": "Shade Kick",
+     "input": "y",
+     "kind": "normal",
+     "anim": "hkick",
+     "hits": [
+      {
+       "at": 2,
+       "damage": 40,
+       "level": "medium",
+       "pausetime": [
+        9,
+        10
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "passives": {
+  "lifeRegen": 0,
+  "meterRegen": 0.3
+ },
+ "winQuote": "Ainda dá pra ficar mais forte.",
+ "color": "#c8321e",
+ "description": "Goku Super Saiyajin 4 rebuilt as an umf/2 fighter: Kamehameha line, Instant Transmission, Meteor Rush, afterimage clone and a limit breaker form."
+}

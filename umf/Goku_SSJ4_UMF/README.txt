@@ -10,4 +10,8 @@ Dash Strike, Ki Volley, Dragon Fist, Escape Burst, afterimage clone (F, B, F), L
 flight (b+c), and normal chains (x x x, a a a, y y, crouch and air jabs), strings (B+x, B+z, B+y), overhead, launcher,
 dive kick and slide.
 
-Needs an ultimate-mugen build with UMF move sounds (PR #815).
+Rebuild: python3 mugen2umf.py <Goku-Ssj4> umf/Goku_SSJ4_UMF --id goku_ssj4_umf --name "Goku SSJ4" --extra tools/goku_ssj4_extra.json
+Every SFF sprite and .snd sound is exported. Intro/taunt run the original CNS (intro text and sound). Ki charge: hold R (Start),
+with the original start, loop and end animations and sounds; taunt moved to x+y. coverage.md lists the fate of every state.
+
+Needs an ultimate-mugen build with the converter parity PR (fly moves, charge start/end, hitNow, landAt).
