@@ -66,8 +66,8 @@ Personagens e stages pertencem aos seus autores originais (veja o readme dentro 
 <tr><td align="center"><img src="previews/stages/dbz_kame_house.png" width="260"><br><sub>dbz_kame_house</sub></td><td align="center"><img src="previews/stages/tenkaichiHR.png" width="260"><br><sub>tenkaichiHR</sub></td><td align="center"><img src="previews/stages/xmagneto.png" width="260"><br><sub>xmagneto</sub></td></tr>
 </table>
 
-## Lutadores UMF (1)
+## Lutadores UMF (2)
 
 <table>
-<tr><td align="center"><img src="previews/umf/Goku_SSJ4_UMF.png" width="260"><br><sub>Goku_SSJ4_UMF</sub></td></tr>
+<tr><td align="center"><img src="previews/umf/BlackWidow_UMF.png" width="260"><br><sub>BlackWidow_UMF</sub></td><td align="center"><img src="previews/umf/Goku_SSJ4_UMF.png" width="260"><br><sub>Goku_SSJ4_UMF</sub></td></tr>
 </table>
