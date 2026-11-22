@@ -1,0 +1,901 @@
+{
+ "description": "Natasha Romanoff, rebuilt from the M.U.G.E.N Black Widow as an umf/2 fighter: Widow's Bite darts, charged elemental Widow's Sting, Gas Grenade, Deadly Spin and the sniper hyper, plus MCU-inspired Bite Overload, Widow's Line, the hidden S.H.I.E.L.D. Backup and the Red Ledger ultimate.",
+ "color": "#b3131b",
+ "series": "Marvel",
+ "author": "Arkady, NIco & Hyper (M.U.G.E.N); UMF conversion",
+ "intro": "Let's balance the books.",
+ "taunt": "You're predictable. That's a compliment... for me.",
+ "winQuote": "The ledger's a little less red today.",
+ "profile": {
+  "country": "RU",
+  "nationality": {
+   "en": "Russian",
+   "pt": "Russa",
+   "es": "Rusa"
+  },
+  "origin": {
+   "en": "Stalingrad, Soviet Union",
+   "pt": "Stalingrado, União Soviética",
+   "es": "Stalingrado, Unión Soviética"
+  },
+  "title": {
+   "en": "The Black Widow",
+   "pt": "A Viúva Negra",
+   "es": "La Viuda Negra"
+  },
+  "fightingStyle": {
+   "en": "Red Room spycraft, acrobatics, Widow's Bite gauntlets and firearms",
+   "pt": "Espionagem da Sala Vermelha, acrobacia, braceletes Widow's Bite e armas de fogo",
+   "es": "Espionaje de la Habitación Roja, acrobacias, brazaletes Widow's Bite y armas de fuego"
+  },
+  "affiliation": {
+   "en": "S.H.I.E.L.D., Avengers",
+   "pt": "S.H.I.E.L.D., Vingadores",
+   "es": "S.H.I.E.L.D., Vengadores"
+  },
+  "bio": {
+   "en": "Raised and conditioned in the Red Room, Natasha defected to S.H.I.E.L.D. and spends every mission trying to wipe the red out of her ledger.",
+   "pt": "Criada e condicionada na Sala Vermelha, Natasha desertou para a S.H.I.E.L.D. e usa cada missão para apagar o vermelho do seu histórico.",
+   "es": "Criada y condicionada en la Habitación Roja, Natasha desertó a S.H.I.E.L.D. y usa cada misión para borrar el rojo de su historial."
+  },
+  "element": "lightning",
+  "alignment": "hero",
+  "tags": [
+   "spy",
+   "marvel",
+   "gadgets",
+   "firearms"
+  ]
+ },
+ "mugenRoutes": [
+  {
+   "state": 3300,
+   "id": "shield_backup",
+   "input": "~D, DB, B, a+b",
+   "cost": 1000
+  }
+ ],
+ "moves": [
+  {
+   "id": "qcf_x",
+   "name": "Widow's Bite"
+  },
+  {
+   "id": "air_qcf_x",
+   "name": "Widow's Bite (Air)"
+  },
+  {
+   "id": "qcf_y",
+   "name": "Widow's Bite"
+  },
+  {
+   "id": "air_qcf_y",
+   "name": "Widow's Bite (Air)"
+  },
+  {
+   "id": "qcf_z",
+   "name": "Widow's Bite"
+  },
+  {
+   "id": "air_qcf_z",
+   "name": "Widow's Bite (Air)"
+  },
+  {
+   "id": "fdf_x",
+   "name": "Widow's Sting"
+  },
+  {
+   "id": "fdf_y",
+   "name": "Widow's Sting"
+  },
+  {
+   "id": "fdf_z",
+   "name": "Widow's Sting"
+  },
+  {
+   "id": "fdf_x_holdx",
+   "name": "Widow's Sting: Charged"
+  },
+  {
+   "id": "fdf_y_holdy",
+   "name": "Widow's Sting: Charged"
+  },
+  {
+   "id": "fdf_z_holdz",
+   "name": "Widow's Sting: Charged"
+  },
+  {
+   "id": "fdf_x_holdx_holdx",
+   "name": "Widow's Sting: Elemental"
+  },
+  {
+   "id": "fdf_y_holdy_holdy",
+   "name": "Widow's Sting: Elemental"
+  },
+  {
+   "id": "fdf_z_holdz_holdz",
+   "name": "Widow's Sting: Elemental"
+  },
+  {
+   "id": "qcb_x",
+   "name": "Gas Grenade"
+  },
+  {
+   "id": "qcb_y",
+   "name": "Gas Grenade"
+  },
+  {
+   "id": "qcb_z",
+   "name": "Gas Grenade"
+  },
+  {
+   "id": "qcf_a",
+   "name": "Deadly Spin"
+  },
+  {
+   "id": "qcf_b",
+   "name": "Deadly Spin"
+  },
+  {
+   "id": "qcf_c",
+   "name": "Deadly Spin"
+  },
+  {
+   "id": "qcb_a",
+   "name": "Widow's Strike"
+  },
+  {
+   "id": "qcb_b",
+   "name": "Widow's Strike"
+  },
+  {
+   "id": "qcb_c",
+   "name": "Widow's Strike"
+  },
+  {
+   "id": "qcf_2p",
+   "name": "Eat Lead"
+  },
+  {
+   "id": "qcb_2p",
+   "name": "Down the Barrel"
+  },
+  {
+   "id": "qcb_2p_a",
+   "name": "Down the Barrel: Fire"
+  },
+  {
+   "id": "qcf_2k",
+   "name": "Widow's Dance"
+  },
+  {
+   "id": "qcf_2k_followup",
+   "name": "Widow's Dance: Finish"
+  },
+  {
+   "id": "z",
+   "name": "Thigh Takedown"
+  },
+  {
+   "id": "air_ff",
+   "name": "Air Dash"
+  },
+  {
+   "id": "guardpush",
+   "name": "Push Block"
+  },
+  {
+   "id": "x_x",
+   "name": "Jab Chain"
+  },
+  {
+   "id": "x",
+   "name": "Jab"
+  },
+  {
+   "id": "crouch_x",
+   "name": "Low Jab"
+  },
+  {
+   "id": "air_x",
+   "name": "Air Jab"
+  },
+  {
+   "id": "y",
+   "name": "Straight"
+  },
+  {
+   "id": "crouch_y",
+   "name": "Low Straight"
+  },
+  {
+   "id": "air_y",
+   "name": "Air Straight"
+  },
+  {
+   "id": "a",
+   "name": "Snap Kick"
+  },
+  {
+   "id": "crouch_a",
+   "name": "Low Snap Kick"
+  },
+  {
+   "id": "air_a",
+   "name": "Air Snap Kick"
+  },
+  {
+   "id": "b",
+   "name": "Side Kick"
+  },
+  {
+   "id": "crouch_b",
+   "name": "Low Side Kick"
+  },
+  {
+   "id": "air_b",
+   "name": "Air Side Kick"
+  },
+  {
+   "id": "c",
+   "name": "Roundhouse"
+  },
+  {
+   "id": "crouch_c",
+   "name": "Low Roundhouse"
+  },
+  {
+   "id": "air_c",
+   "name": "Air Roundhouse"
+  },
+  {
+   "id": "crouch_z",
+   "name": "Low Sweep"
+  },
+  {
+   "id": "air_z",
+   "name": "Air Elbow"
+  },
+  {
+   "id": "air_c_z",
+   "name": "Air Follow-up"
+  },
+  {
+   "id": "bite_overload",
+   "name": "Widow's Bite: Overload",
+   "input": "~F, D, DF, x+y",
+   "kind": "super",
+   "cost": 1000,
+   "anim": "a1030",
+   "note": "MCU: both gauntlets dump their charge as three electric darts.",
+   "projectile": {
+    "at": 5,
+    "anim": "a1001",
+    "speed": [
+     18.0,
+     0.0
+    ],
+    "offset": [
+     12.0,
+     -55.0
+    ],
+    "damage": 40,
+    "guardDamage": 5,
+    "hitAnim": "a1002",
+    "knockback": [
+     -4.0,
+     2.0
+    ],
+    "launch": true,
+    "pausetime": [
+     4,
+     4
+    ],
+    "hitflag": "MAF",
+    "hitSound": [
+     172,
+     13
+    ],
+    "ownSound": true,
+    "element": "lightning",
+    "stun": 10,
+    "repeat": {
+     "count": 3,
+     "every": 4,
+     "offsetStep": [
+      0,
+      -8
+     ],
+     "damageStep": -5
+    }
+   },
+   "sounds": [
+    {
+     "at": 2,
+     "snd": [
+      172,
+      6
+     ]
+    },
+    {
+     "at": 4,
+     "snd": [
+      172,
+      0
+     ]
+    },
+    {
+     "at": 5,
+     "snd": [
+      172,
+      13
+     ]
+    }
+   ],
+   "explods": [
+    {
+     "at": 5,
+     "anim": "a1003",
+     "pos": [
+      32.0,
+      -55.0
+     ],
+     "postype": "p1",
+     "bind": 999,
+     "removeTime": -2,
+     "priority": 5
+    }
+   ],
+   "palFx": [
+    {
+     "at": 1,
+     "time": 30,
+     "add": [
+      30,
+      60,
+      140
+     ],
+     "sinAdd": [
+      70,
+      90,
+      160,
+      6
+     ]
+    }
+   ],
+   "superPause": {
+    "at": 2,
+    "time": 40,
+    "darken": true
+   }
+  },
+  {
+   "id": "widows_line",
+   "name": "Widow's Line",
+   "input": "~B, F, c",
+   "kind": "special",
+   "cost": 250,
+   "anim": "a250",
+   "note": "MCU: grapple line from the bracelets zips her behind the target for a spinning kick.",
+   "blink": {
+    "at": 1,
+    "to": "behind",
+    "gap": 26
+   },
+   "afterimage": {
+    "at": 1,
+    "time": 14,
+    "length": 8,
+    "trans": "add",
+    "palAdd": [
+     20,
+     0,
+     0
+    ]
+   },
+   "hits": [
+    {
+     "at": 1,
+     "damage": 60,
+     "level": "heavy",
+     "pausetime": [
+      8,
+      8
+     ],
+     "hitstun": 20,
+     "knockback": [
+      -4.0,
+      -4.0
+     ],
+     "airKnockback": [
+      -4.0,
+      -8.0
+     ],
+     "hitSound": [
+      5,
+      3
+     ],
+     "hitflag": "MAF",
+     "wallBounce": true,
+     "element": "lightning",
+     "stun": 4
+    }
+   ],
+   "sounds": [
+    {
+     "at": 1,
+     "snd": [
+      8,
+      0
+     ]
+    },
+    {
+     "at": 2,
+     "snd": [
+      0,
+      2
+     ]
+    }
+   ],
+   "cancels": [
+    "qcf_x",
+    "bite_overload"
+   ]
+  },
+  {
+   "id": "ult_red_ledger",
+   "name": "Red Ledger",
+   "input": "~D, DF, F, D, DF, F, x+y",
+   "kind": "super",
+   "anim": "seq1320",
+   "note": "MCU: the Red Room conditioning taken to its limit; vanish, reappear behind and spin the full Deadly Spin chain.",
+   "blink": {
+    "at": 1,
+    "to": "behind",
+    "gap": 30
+   },
+   "hits": [
+    {
+     "at": 7,
+     "damage": 60,
+     "guardDamage": 4,
+     "level": "heavy",
+     "pausetime": [
+      8,
+      8
+     ],
+     "hitstun": 20,
+     "knockback": [
+      -2.0,
+      -5.0
+     ],
+     "airKnockback": [
+      -1.0,
+      -5.0
+     ],
+     "hitSound": [
+      2,
+      2
+     ],
+     "ownSound": true,
+     "hitflag": "MAFD"
+    },
+    {
+     "at": 17,
+     "damage": 40,
+     "guardDamage": 4,
+     "level": "heavy",
+     "pausetime": [
+      9,
+      9
+     ],
+     "hitstun": 20,
+     "knockback": [
+      -2.0,
+      -5.0
+     ],
+     "airKnockback": [
+      -1.0,
+      -1.0
+     ],
+     "hitSound": [
+      2,
+      0
+     ],
+     "ownSound": true,
+     "hitflag": "MAF",
+     "wallBounce": true
+    },
+    {
+     "at": 18,
+     "damage": 40,
+     "guardDamage": 4,
+     "level": "heavy",
+     "pausetime": [
+      9,
+      9
+     ],
+     "hitstun": 20,
+     "knockback": [
+      -2.0,
+      -5.0
+     ],
+     "airKnockback": [
+      -1.0,
+      -1.0
+     ],
+     "hitSound": [
+      2,
+      0
+     ],
+     "ownSound": true,
+     "hitflag": "MAF",
+     "wallBounce": true
+    },
+    {
+     "at": 19,
+     "damage": 40,
+     "guardDamage": 4,
+     "level": "heavy",
+     "pausetime": [
+      9,
+      9
+     ],
+     "hitstun": 20,
+     "knockback": [
+      -2.0,
+      -5.0
+     ],
+     "airKnockback": [
+      -1.0,
+      -1.0
+     ],
+     "hitSound": [
+      2,
+      0
+     ],
+     "ownSound": true,
+     "hitflag": "MAF",
+     "wallBounce": true
+    },
+    {
+     "at": 25,
+     "damage": 120,
+     "guardDamage": 5,
+     "level": "heavy",
+     "pausetime": [
+      17,
+      7
+     ],
+     "hitstun": 20,
+     "knockback": [
+      -8.0,
+      -11.0
+     ],
+     "airKnockback": [
+      -8.0,
+      -11.0
+     ],
+     "launch": true,
+     "hitSound": [
+      2,
+      2
+     ],
+     "ownSound": true,
+     "hitflag": "MAF"
+    }
+   ],
+   "moves": [
+    {
+     "at": 6,
+     "vel": [
+      7.0,
+      0.0
+     ]
+    },
+    {
+     "at": 8,
+     "vel": [
+      4.0,
+      0.0
+     ]
+    },
+    {
+     "at": 10,
+     "vel": [
+      2.0,
+      0.0
+     ]
+    },
+    {
+     "at": 11,
+     "vel": [
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "at": 14,
+     "vel": [
+      4.0,
+      0.0
+     ]
+    },
+    {
+     "at": 17,
+     "vel": [
+      4.0,
+      0.0
+     ]
+    },
+    {
+     "at": 20,
+     "vel": [
+      4.0,
+      0.0
+     ]
+    },
+    {
+     "at": 23,
+     "vel": [
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "at": 24,
+     "vel": [
+      7.0,
+      0.0
+     ]
+    },
+    {
+     "at": 25,
+     "vel": [
+      4.0,
+      0.0
+     ]
+    },
+    {
+     "at": 26,
+     "vel": [
+      2.0,
+      0.0
+     ]
+    },
+    {
+     "at": 27,
+     "vel": [
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "sounds": [
+    {
+     "at": 5,
+     "snd": [
+      8,
+      0
+     ]
+    },
+    {
+     "at": 4,
+     "snd": [
+      0,
+      2
+     ]
+    },
+    {
+     "at": 17,
+     "snd": [
+      0,
+      1
+     ]
+    },
+    {
+     "at": 17,
+     "snd": [
+      0,
+      0
+     ]
+    },
+    {
+     "at": 19,
+     "snd": [
+      0,
+      3
+     ]
+    },
+    {
+     "at": 21,
+     "snd": [
+      0,
+      1
+     ]
+    },
+    {
+     "at": 25,
+     "snd": [
+      0,
+      2
+     ]
+    }
+   ],
+   "explods": [
+    {
+     "at": 7,
+     "anim": "a1301",
+     "pos": [
+      -30.0,
+      0.0
+     ],
+     "postype": "p1",
+     "removeTime": -2,
+     "priority": 10,
+     "scale": [
+      1.0,
+      0.5
+     ]
+    },
+    {
+     "at": 7,
+     "anim": "a1302",
+     "pos": [
+      20.0,
+      0.0
+     ],
+     "postype": "p1",
+     "removeTime": -2,
+     "priority": 10,
+     "scale": [
+      1.0,
+      1.0
+     ]
+    },
+    {
+     "at": 17,
+     "anim": "a1301",
+     "pos": [
+      0.0,
+      0.0
+     ],
+     "postype": "p1",
+     "removeTime": -2,
+     "priority": 10,
+     "scale": [
+      1.0,
+      0.5
+     ]
+    },
+    {
+     "at": 17,
+     "anim": "a1304",
+     "pos": [
+      0.0,
+      -15.0
+     ],
+     "postype": "p1",
+     "removeTime": -2,
+     "priority": 10,
+     "scale": [
+      1.0,
+      1.0
+     ]
+    },
+    {
+     "at": 19,
+     "anim": "a1304",
+     "pos": [
+      0.0,
+      -20.0
+     ],
+     "postype": "p1",
+     "removeTime": -2,
+     "priority": 10,
+     "scale": [
+      1.0,
+      1.0
+     ]
+    },
+    {
+     "at": 21,
+     "anim": "a1304",
+     "pos": [
+      0.0,
+      -25.0
+     ],
+     "postype": "p1",
+     "removeTime": -2,
+     "priority": 10,
+     "scale": [
+      1.0,
+      1.0
+     ]
+    },
+    {
+     "at": 30,
+     "anim": "a1301",
+     "pos": [
+      -30.0,
+      0.0
+     ],
+     "postype": "p1",
+     "removeTime": -2,
+     "priority": 10,
+     "scale": [
+      1.0,
+      0.5
+     ]
+    },
+    {
+     "at": 25,
+     "anim": "a1306",
+     "pos": [
+      -7.0,
+      -15.0
+     ],
+     "postype": "p1",
+     "removeTime": -2,
+     "priority": 10,
+     "scale": [
+      1.0,
+      1.0
+     ]
+    }
+   ],
+   "afterimage": {
+    "at": 1,
+    "time": 80,
+    "length": 10,
+    "trans": "add",
+    "palAdd": [
+     90,
+     0,
+     0
+    ],
+    "palMul": [
+     1.2,
+     0.5,
+     0.5
+    ]
+   },
+   "palFx": [
+    {
+     "at": 1,
+     "time": 90,
+     "add": [
+      80,
+      -20,
+      -20
+     ],
+     "sinAdd": [
+      60,
+      0,
+      0,
+      8
+     ]
+    }
+   ],
+   "superPause": {
+    "at": 1,
+    "time": 60,
+    "darken": true
+   },
+   "flash": {
+    "at": 1,
+    "time": 8,
+    "color": [
+     255,
+     40,
+     40
+    ]
+   }
+  },
+  {
+   "id": "shield_backup",
+   "name": "S.H.I.E.L.D. Backup",
+   "note": "Hidden in the original .cmd (Hyper4, commented out): Agent Coulson's truck and the strike team, unlocked."
+  }
+ ]
+}
