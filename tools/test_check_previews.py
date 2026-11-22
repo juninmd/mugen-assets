@@ -67,6 +67,12 @@ class CheckUmf(unittest.TestCase):
             os.makedirs(os.path.join(root, k), exist_ok=True)
         return check_previews.problems(root)
 
+    def test_exact_umf_pack_has_meta_instead_of_idle(self):
+        files = {"hero.json": b'{"format":"umf/2"}', "sprites/meta.json": b"{}"}
+        with tempfile.TemporaryDirectory() as root:
+            zipped = {"Hero/" + k: v for k, v in files.items()}
+            self.assertEqual(self.build(root, zipped, files), [])
+
     def test_valid_umf_pack(self):
         files = {"hero.json": b'{"format":"umf/2"}', "sprites/01_idle.png": b"png"}
         with tempfile.TemporaryDirectory() as root:
