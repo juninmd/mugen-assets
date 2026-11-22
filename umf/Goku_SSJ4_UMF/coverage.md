@@ -55,7 +55,7 @@
 | 730 | ability |
 | 735 | ability |
 | 740 | ability |
-| 741 | ability (approximated by the native ability) |
+| 741 | ability |
 | 800 | move `balao11` |
 | 810 | partial: throw states replaced by the UMF `throw` block |
 | 820 | partial: throw states replaced by the UMF `throw` block |

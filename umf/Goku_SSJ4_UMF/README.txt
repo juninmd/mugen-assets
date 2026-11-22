@@ -14,4 +14,6 @@ Rebuild: python3 mugen2umf.py <Goku-Ssj4> umf/Goku_SSJ4_UMF --id goku_ssj4_umf -
 Every SFF sprite and .snd sound is exported. Intro/taunt run the original CNS (intro text and sound). Ki charge: hold R (Start),
 with the original start, loop and end animations and sounds; taunt moved to x+y. coverage.md lists the fate of every state.
 
-Needs an ultimate-mugen build with the converter parity PR (fly moves, charge start/end, hitNow, landAt) and the motion fields (velMul, velAdd, posFreeze, posSet, palFx).
+The four extra palettes of the original (pal2 to pal5) come as exact colour maps (pal4 and pal5 equal pal1), the grab (Balao, B+a/b/c and F+a/b/c) keeps its original bind, sound, damage and launch as throw steps, and the charge gain follows the original loop (abilities.charge.gain).
+
+Needs an ultimate-mugen build with the converter parity PR (fly moves, charge start/end, hitNow, landAt), the motion fields (velMul, velAdd, posFreeze, posSet, palFx), exact palettes and abilities.charge.gain.
