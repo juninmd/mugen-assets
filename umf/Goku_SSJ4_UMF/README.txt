@@ -6,5 +6,5 @@ UMF layer on top (tools/mugen2umf/overlays):
 - Ryu Ken dragon (state 3050) homes in on the nearest living foe in 2D, turns around when the foe is behind and slows on contact. Needs the engine NearestFoe redirection.
 - Skill afterimage trails (Ryu Ken, Shunkan Ido, Kamehameha variants, Explosive Wave, Super Energy Blast) through Statedef -2.
 
-parity.md shows the move by move comparison: only state 3050 and -2 differ on purpose.
+parity.md: the exact base is IDENTICAL to the original (20 of 20 moves); the overlays (scripts) change only states 3050 and -2.
 Rebuild: mugen2umf convert chars/Goku_SS4.zip umf/Goku_SSJ4_UMF --id goku_ssj4_umf --name "Goku SSJ4" --extra <overlays as scripts.cns, override true>
