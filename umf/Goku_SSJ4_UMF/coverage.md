@@ -1,121 +1,226 @@
-# Coverage: Goku SSJ4
+# goku_ssj4_umf
 
-- States: 112/112 accounted for; the rest are NOT MIGRATED rows below
-- Sprites: 198/198 exported; 96 referenced by the .air but absent from the .sff (blank in M.U.G.E.N too)
-- Sounds: 19/19 exported
-- Commands in .cmd: 64; UMF moves: 86; abilities: charge, fly, forms
+Source: `goku_ss4/goku_ss4.def`
 
-| state | migrated as |
-|---|---|
-| 100 | engine common state |
-| 105 | engine common state |
-| 170 | script (verbatim CNS) |
-| 180 | script (verbatim CNS) |
-| 181 | script (verbatim CNS) |
-| 182 | script (verbatim CNS) |
-| 189 | script (verbatim CNS) |
-| 190 | script (verbatim CNS) |
-| 191 | script (verbatim CNS) |
-| 192 | script (verbatim CNS) |
-| 193 | script (verbatim CNS) |
-| 194 | script (verbatim CNS) |
-| 195 | script (verbatim CNS) |
-| 200 | move `a` |
-| 201 | move `b` |
-| 202 | move `c` |
-| 210 | move `x` |
-| 230 | move `y` |
-| 240 | move `z` |
-| 250 | unreachable in the original (dead code) |
-| 260 | unreachable in the original (dead code) |
-| 270 | unreachable in the original (dead code) |
-| 280 | unreachable in the original (dead code) |
-| 300 | move `fly_a` |
-| 301 | move `fly_b` |
-| 302 | move `fly_c` |
-| 310 | move `fly_x` |
-| 330 | move `fly_y` |
-| 340 | move `fly_z` |
-| 350 | unreachable in the original (dead code) |
-| 351 | unreachable in the original (dead code) |
-| 400 | move `crouch_x` |
-| 410 | move `crouch_y` |
-| 430 | move `crouch_a` |
-| 435 | move `crouch_b` |
-| 437 | move `crouch_c` |
-| 440 | move `crouch_z` |
-| 600 | move `air_a` |
-| 601 | move `air_b` |
-| 602 | move `ssj_sequence3` |
-| 610 | move `air_x` |
-| 611 | move `air_y` |
-| 612 | move `air_z` |
-| 615 | move `air_slash1` |
-| 616 | partial: throw states replaced by the UMF `throw` block |
-| 730 | ability |
-| 735 | ability |
-| 740 | ability |
-| 741 | ability |
-| 800 | move `balao11` |
-| 810 | partial: throw states replaced by the UMF `throw` block |
-| 820 | partial: throw states replaced by the UMF `throw` block |
-| 821 | partial: throw states replaced by the UMF `throw` block |
-| 954 | shadowed: an earlier command with the same input wins (never fires in M.U.G.E.N either) |
-| 1000 | shadowed: an earlier command with the same input wins (never fires in M.U.G.E.N either) |
-| 1020 | move `ssj_sequence2` |
-| 1025 | partial: throw states replaced by the UMF `throw` block |
-| 1026 | partial: throw states replaced by the UMF `throw` block |
-| 1027 | partial: throw states replaced by the UMF `throw` block |
-| 1028 | partial: throw states replaced by the UMF `throw` block |
-| 1030 | move `m_atack` |
-| 1031 | move `m_atack` |
-| 1041 | move `m_atack` |
-| 1050 | move `ssj_sequence` |
-| 1099 | move `fireballb` |
-| 1390 | move `fireball3` |
-| 1391 | move `fireball3` |
-| 1392 | move `fireball3` |
-| 1700 | shadowed: an earlier command with the same input wins (never fires in M.U.G.E.N either) |
-| 1800 | shadowed: an earlier command with the same input wins (never fires in M.U.G.E.N either) |
-| 1900 | move `xbaikamehameha` |
-| 2050 | move `ssj_sequence2` |
-| 2070 | move `ssj_sequence3` |
-| 2187 | move `m_atack` |
-| 2390 | move `fireball3b` |
-| 2391 | move `fireball3b` |
-| 2392 | move `fireball3b` |
-| 2530 | move `ssj_sequence2` |
-| 2730 | move `ssj_sequence3` |
-| 2989 | unreachable in the original (dead code) |
-| 2992 | move `punch_d` |
-| 3001 | ability |
-| 3030 | move `dragon_fist` |
-| 3031 | move `dragon_fist` |
-| 3041 | move `dragon_fist` |
-| 3115 | ability |
-| 3187 | move `m_atack` |
-| 3188 | move `m_atack` |
-| 3189 | move `m_atack` |
-| 3210 | move `punch_d2` |
-| 4010 | move `m_atack` |
-| 4011 | move `m_atack` |
-| 4012 | move `m_atack` |
-| 6010 | move `m_atack2` |
-| 6011 | move `m_atack2` |
-| 6012 | move `m_atack2` |
-| 6187 | move `m_atack2` |
-| 6351 | move `m_atack2` |
-| 6500 | move `m_atack2` |
-| 7500 | move `teleport_a` |
-| 7510 | move `teleport_a2` |
-| 7520 | move `teleport_b` |
-| 7530 | move `teleport_b2` |
-| 7535 | move `airteleport_b` |
-| 7550 | move `airteleport_a` |
-| 7825 | move `supergenkidama` |
-| 7899 | unreachable in the original (dead code) |
-| 9797 | script (verbatim CNS) |
-| 31700 | move `airkamehameha` |
-| 31800 | move `airchokamehameha` |
-| 47800 | move `supergenkidama` |
-| 81900 | move `supergenkidama` |
+```json
+{
+  "anims": 130,
+  "author": "Mikel8888",
+  "commands": 78,
+  "controllers": {
+    "angledraw": 23,
+    "assertspecial": 33,
+    "attackmulset": 10,
+    "bgpalfx": 12,
+    "bindtoroot": 15,
+    "changeanim": 80,
+    "changestate": 147,
+    "ctrlset": 7,
+    "defencemulset": 2,
+    "destroyself": 32,
+    "envshake": 14,
+    "explod": 72,
+    "fallenvshake": 2,
+    "forcefeedback": 16,
+    "gamemakeanim": 3,
+    "gravity": 2,
+    "helper": 34,
+    "hitdef": 15,
+    "hitfalldamage": 2,
+    "hitfallset": 1,
+    "hitfallvel": 1,
+    "hitoverride": 2,
+    "hitvelset": 8,
+    "nothitby": 9,
+    "null": 1,
+    "palfx": 4,
+    "parentvarset": 2,
+    "pause": 2,
+    "playerpush": 1,
+    "playsnd": 82,
+    "posadd": 4,
+    "posfreeze": 2,
+    "posset": 15,
+    "poweradd": 1,
+    "removeexplod": 6,
+    "selfstate": 1,
+    "statetypeset": 34,
+    "stopsnd": 10,
+    "superpause": 10,
+    "trans": 27,
+    "turn": 5,
+    "varadd": 16,
+    "varrandom": 1,
+    "varrangeset": 2,
+    "varset": 40,
+    "veladd": 18,
+    "velmul": 9,
+    "velset": 42
+  },
+  "def": "goku_ss4/goku_ss4.def",
+  "engine": "goku_ss4/goku_ss4.def: 0 unsupported controllers, 1 unknown triggers, 4 unknown parameters, 0 unknown AssertSpecial flags\n",
+  "files": {
+    "cmd": "Goku_SS4.cmd",
+    "cns": "Goku_SS4.cns",
+    "st": [
+      "IA.cns",
+      "Especiales.cns",
+      "Supers.cns"
+    ],
+    "stcommon": "common1.cns"
+  },
+  "localcoord": null,
+  "mugenversion": "1.0",
+  "name": "Goku",
+  "palettes": 6,
+  "routes": [
+    {
+      "command": "FF",
+      "cost": 0,
+      "input": "F, F",
+      "state": 60,
+      "when": "stand"
+    },
+    {
+      "command": "BB",
+      "cost": 0,
+      "input": "B, B",
+      "state": 70,
+      "when": "stand"
+    },
+    {
+      "command": "Super Jump",
+      "cost": 0,
+      "input": "~D,U",
+      "state": 80,
+      "when": "stand"
+    },
+    {
+      "command": "SUPER1",
+      "cost": 3000,
+      "input": "~D,DF,F,D,DF,F,a+b",
+      "state": 3000,
+      "when": "stand"
+    },
+    {
+      "command": "SPECIAL 8",
+      "cost": 1500,
+      "input": "~F,DF,D,DB,B,a",
+      "state": 1600,
+      "when": "stand"
+    },
+    {
+      "command": "SPECIAL 1",
+      "cost": 500,
+      "input": "~D,DF,F,a",
+      "state": 1000,
+      "when": "stand"
+    },
+    {
+      "command": "SPECIAL 2",
+      "cost": 500,
+      "input": "~D,DB,B,a",
+      "state": 1100,
+      "when": "stand"
+    },
+    {
+      "command": "SPECIAL 3",
+      "cost": 1500,
+      "input": "~D,DF,F,b",
+      "state": 1200,
+      "when": "stand"
+    },
+    {
+      "command": "SPECIAL 4",
+      "cost": 500,
+      "input": "~D,DB,B,b",
+      "state": 1300,
+      "when": "stand"
+    },
+    {
+      "command": "SPECIAL 12",
+      "cost": 1000,
+      "input": "~F,DF,D,DB,B,c",
+      "state": 1700,
+      "when": "stand"
+    },
+    {
+      "command": "SPECIAL 11",
+      "cost": 1500,
+      "input": "~B,DB,D,DF,F,c",
+      "state": 1800,
+      "when": "stand"
+    },
+    {
+      "command": "SPECIAL 5",
+      "cost": 1500,
+      "input": "~D,DF,F,c",
+      "state": 1400,
+      "when": "stand"
+    },
+    {
+      "command": "SPECIAL 6",
+      "cost": 1000,
+      "input": "~D,DB,B,c",
+      "state": 1500,
+      "when": "stand"
+    },
+    {
+      "command": "a",
+      "cost": 0,
+      "input": "a",
+      "state": 200,
+      "when": "stand"
+    },
+    {
+      "command": "b",
+      "cost": 0,
+      "input": "b",
+      "state": 300,
+      "when": "stand"
+    },
+    {
+      "command": "c",
+      "cost": 200,
+      "input": "c",
+      "state": 400,
+      "when": "stand"
+    },
+    {
+      "command": "s",
+      "cost": 0,
+      "input": "s",
+      "state": 500,
+      "when": "stand"
+    },
+    {
+      "command": "a",
+      "cost": 0,
+      "input": "a",
+      "state": 600,
+      "when": "air"
+    },
+    {
+      "command": "b",
+      "cost": 0,
+      "input": "b",
+      "state": 610,
+      "when": "air"
+    },
+    {
+      "command": "c",
+      "cost": 200,
+      "input": "c",
+      "state": 620,
+      "when": "air"
+    }
+  ],
+  "sff": {
+    "palettes": 245,
+    "sprites": 763,
+    "version": 1
+  },
+  "sounds": 104,
+  "states": 113
+}
+```

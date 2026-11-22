@@ -1,19 +1,10 @@
 Goku SSJ4 UMF
 
-umf/2 fighter for ultimate-mugen, converted from the public M.U.G.E.N pack "Goku SSJ4" with mugen2umf.py
-(ultimate-mugen .agents/skills/mugen-to-ume-migrator). Original art and sounds belong to the pack's authors; personal, non-commercial use.
+Exact migration of the M.U.G.E.N pack Goku_SS4 (chars/Goku_SS4.zip) made with ultimate-mugen tools/mugen2umf: original states, commands and animations load through the same engine path as the M.U.G.E.N original. Art and sounds belong to the pack's authors; personal, non-commercial use.
 
-Faithful to the original: sprites 1:1 at the original size, Clsn1/Clsn2 hit and hurt boxes, the original moves and commands
-(SSJ sequences, kamehameha, chou and x10 kamehameha, ki blasts, teleports, flight, Meteor attacks, Super Genki Dama, throw),
-and the original voice and effect sounds (sprites/snd_*.wav). UMF additions on top (rebuilt with --extra): Instant Transmission (B, F, x), Meteor Rush (B, F, a), Dragon Rise,
-Dash Strike, Ki Volley, Dragon Fist, Escape Burst, afterimage clone (F, B, F), Limit Breaker form with Limit Kamehameha,
-flight (b+c), and normal chains (x x x, a a a, y y, crouch and air jabs), strings (B+x, B+z, B+y), overhead, launcher,
-dive kick and slide.
+UMF layer on top (tools/mugen2umf/overlays):
+- Ryu Ken dragon (state 3050) homes in on the nearest living foe in 2D, turns around when the foe is behind and slows on contact. Needs the engine NearestFoe redirection.
+- Skill afterimage trails (Ryu Ken, Shunkan Ido, Kamehameha variants, Explosive Wave, Super Energy Blast) through Statedef -2.
 
-Rebuild: python3 mugen2umf.py <Goku-Ssj4> umf/Goku_SSJ4_UMF --id goku_ssj4_umf --name "Goku SSJ4" --extra tools/goku_ssj4_extra.json
-Every SFF sprite and .snd sound is exported. Intro/taunt run the original CNS (intro text and sound). Ki charge: hold R (Start),
-with the original start, loop and end animations and sounds; taunt moved to x+y. coverage.md lists the fate of every state.
-
-The four extra palettes of the original (pal2 to pal5) come as exact colour maps (pal4 and pal5 equal pal1), the grab (Balao, B+a/b/c and F+a/b/c) keeps its original bind, sound, damage and launch as throw steps, and the charge gain follows the original loop (abilities.charge.gain).
-
-Needs an ultimate-mugen build with the converter parity PR (fly moves, charge start/end, hitNow, landAt), the motion fields (velMul, velAdd, posFreeze, posSet, palFx), exact palettes and abilities.charge.gain.
+parity.md shows the move by move comparison: only state 3050 and -2 differ on purpose.
+Rebuild: mugen2umf convert chars/Goku_SS4.zip umf/Goku_SSJ4_UMF --id goku_ssj4_umf --name "Goku SSJ4" --extra <overlays as scripts.cns, override true>
