@@ -119,10 +119,3 @@
 | 31800 | move `airchokamehameha` |
 | 47800 | move `supergenkidama` |
 | 81900 | move `supergenkidama` |
-
-Controllers inside migrated moves without a UMF field (dropped):
-
-- `velmul` x3
-- `posfreeze` x3
-- `posset` x2
-- `palfx` x1
