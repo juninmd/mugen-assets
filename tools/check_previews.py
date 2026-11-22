@@ -47,8 +47,8 @@ def umf_problems(path, name, names):
             return out + [f"invalid json: {jsons[0]} ({e})"]
         if not str(fighter.get("format", "")).startswith("umf/"):
             out.append(f"layout: {jsons[0]} is not a umf fighter")
-    if f"{name}/sprites/01_idle.png" not in packed:
-        out.append(f"layout: umf/{name}.zip has no {name}/sprites/01_idle.png")
+    if f"{name}/sprites/01_idle.png" not in packed and f"{name}/sprites/meta.json" not in packed:
+        out.append(f"layout: umf/{name}.zip has no {name}/sprites/01_idle.png (or sprites/meta.json for an exact M.U.G.E.N pack)")
     for base, _, files in os.walk(folder):
         for f in files:
             arc = os.path.relpath(os.path.join(base, f), os.path.dirname(folder)).replace(os.sep, "/")

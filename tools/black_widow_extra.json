@@ -53,6 +53,13 @@
    "id": "shield_backup",
    "input": "~D, DB, B, a+b",
    "cost": 1000
+  },
+  {
+   "state": 90100,
+   "id": "red_ledger",
+   "name": "Red Ledger",
+   "input": "~D, DF, F, D, DF, F, x+y",
+   "cost": 3000
   }
  ],
  "moves": [
@@ -266,11 +273,11 @@
    "input": "~F, D, DF, x+y",
    "kind": "super",
    "cost": 1000,
-   "anim": "a1030",
+   "anim": "1030",
    "note": "MCU: both gauntlets dump their charge as three electric darts.",
    "projectile": {
     "at": 5,
-    "anim": "a1001",
+    "anim": "1001",
     "speed": [
      18.0,
      0.0
@@ -281,7 +288,7 @@
     ],
     "damage": 40,
     "guardDamage": 5,
-    "hitAnim": "a1002",
+    "hitAnim": "1002",
     "knockback": [
      -4.0,
      2.0
@@ -335,7 +342,7 @@
    "explods": [
     {
      "at": 5,
-     "anim": "a1003",
+     "anim": "1003",
      "pos": [
       32.0,
       -55.0
@@ -375,7 +382,7 @@
    "input": "~B, F, c",
    "kind": "special",
    "cost": 250,
-   "anim": "a250",
+   "anim": "250",
    "note": "MCU: grapple line from the bracelets zips her behind the target for a spinning kick.",
    "blink": {
     "at": 1,
@@ -443,459 +450,16 @@
    ]
   },
   {
-   "id": "ult_red_ledger",
-   "name": "Red Ledger",
-   "input": "~D, DF, F, D, DF, F, x+y",
-   "kind": "super",
-   "anim": "seq1320",
-   "note": "MCU: the Red Room conditioning taken to its limit; vanish, reappear behind and spin the full Deadly Spin chain.",
-   "blink": {
-    "at": 1,
-    "to": "behind",
-    "gap": 30
-   },
-   "hits": [
-    {
-     "at": 7,
-     "damage": 60,
-     "guardDamage": 4,
-     "level": "heavy",
-     "pausetime": [
-      8,
-      8
-     ],
-     "hitstun": 20,
-     "knockback": [
-      -2.0,
-      -5.0
-     ],
-     "airKnockback": [
-      -1.0,
-      -5.0
-     ],
-     "hitSound": [
-      2,
-      2
-     ],
-     "ownSound": true,
-     "hitflag": "MAFD"
-    },
-    {
-     "at": 17,
-     "damage": 40,
-     "guardDamage": 4,
-     "level": "heavy",
-     "pausetime": [
-      9,
-      9
-     ],
-     "hitstun": 20,
-     "knockback": [
-      -2.0,
-      -5.0
-     ],
-     "airKnockback": [
-      -1.0,
-      -1.0
-     ],
-     "hitSound": [
-      2,
-      0
-     ],
-     "ownSound": true,
-     "hitflag": "MAF",
-     "wallBounce": true
-    },
-    {
-     "at": 18,
-     "damage": 40,
-     "guardDamage": 4,
-     "level": "heavy",
-     "pausetime": [
-      9,
-      9
-     ],
-     "hitstun": 20,
-     "knockback": [
-      -2.0,
-      -5.0
-     ],
-     "airKnockback": [
-      -1.0,
-      -1.0
-     ],
-     "hitSound": [
-      2,
-      0
-     ],
-     "ownSound": true,
-     "hitflag": "MAF",
-     "wallBounce": true
-    },
-    {
-     "at": 19,
-     "damage": 40,
-     "guardDamage": 4,
-     "level": "heavy",
-     "pausetime": [
-      9,
-      9
-     ],
-     "hitstun": 20,
-     "knockback": [
-      -2.0,
-      -5.0
-     ],
-     "airKnockback": [
-      -1.0,
-      -1.0
-     ],
-     "hitSound": [
-      2,
-      0
-     ],
-     "ownSound": true,
-     "hitflag": "MAF",
-     "wallBounce": true
-    },
-    {
-     "at": 25,
-     "damage": 120,
-     "guardDamage": 5,
-     "level": "heavy",
-     "pausetime": [
-      17,
-      7
-     ],
-     "hitstun": 20,
-     "knockback": [
-      -8.0,
-      -11.0
-     ],
-     "airKnockback": [
-      -8.0,
-      -11.0
-     ],
-     "launch": true,
-     "hitSound": [
-      2,
-      2
-     ],
-     "ownSound": true,
-     "hitflag": "MAF"
-    }
-   ],
-   "moves": [
-    {
-     "at": 6,
-     "vel": [
-      7.0,
-      0.0
-     ]
-    },
-    {
-     "at": 8,
-     "vel": [
-      4.0,
-      0.0
-     ]
-    },
-    {
-     "at": 10,
-     "vel": [
-      2.0,
-      0.0
-     ]
-    },
-    {
-     "at": 11,
-     "vel": [
-      0.0,
-      0.0
-     ]
-    },
-    {
-     "at": 14,
-     "vel": [
-      4.0,
-      0.0
-     ]
-    },
-    {
-     "at": 17,
-     "vel": [
-      4.0,
-      0.0
-     ]
-    },
-    {
-     "at": 20,
-     "vel": [
-      4.0,
-      0.0
-     ]
-    },
-    {
-     "at": 23,
-     "vel": [
-      0.0,
-      0.0
-     ]
-    },
-    {
-     "at": 24,
-     "vel": [
-      7.0,
-      0.0
-     ]
-    },
-    {
-     "at": 25,
-     "vel": [
-      4.0,
-      0.0
-     ]
-    },
-    {
-     "at": 26,
-     "vel": [
-      2.0,
-      0.0
-     ]
-    },
-    {
-     "at": 27,
-     "vel": [
-      0.0,
-      0.0
-     ]
-    }
-   ],
-   "sounds": [
-    {
-     "at": 5,
-     "snd": [
-      8,
-      0
-     ]
-    },
-    {
-     "at": 4,
-     "snd": [
-      0,
-      2
-     ]
-    },
-    {
-     "at": 17,
-     "snd": [
-      0,
-      1
-     ]
-    },
-    {
-     "at": 17,
-     "snd": [
-      0,
-      0
-     ]
-    },
-    {
-     "at": 19,
-     "snd": [
-      0,
-      3
-     ]
-    },
-    {
-     "at": 21,
-     "snd": [
-      0,
-      1
-     ]
-    },
-    {
-     "at": 25,
-     "snd": [
-      0,
-      2
-     ]
-    }
-   ],
-   "explods": [
-    {
-     "at": 7,
-     "anim": "a1301",
-     "pos": [
-      -30.0,
-      0.0
-     ],
-     "postype": "p1",
-     "removeTime": -2,
-     "priority": 10,
-     "scale": [
-      1.0,
-      0.5
-     ]
-    },
-    {
-     "at": 7,
-     "anim": "a1302",
-     "pos": [
-      20.0,
-      0.0
-     ],
-     "postype": "p1",
-     "removeTime": -2,
-     "priority": 10,
-     "scale": [
-      1.0,
-      1.0
-     ]
-    },
-    {
-     "at": 17,
-     "anim": "a1301",
-     "pos": [
-      0.0,
-      0.0
-     ],
-     "postype": "p1",
-     "removeTime": -2,
-     "priority": 10,
-     "scale": [
-      1.0,
-      0.5
-     ]
-    },
-    {
-     "at": 17,
-     "anim": "a1304",
-     "pos": [
-      0.0,
-      -15.0
-     ],
-     "postype": "p1",
-     "removeTime": -2,
-     "priority": 10,
-     "scale": [
-      1.0,
-      1.0
-     ]
-    },
-    {
-     "at": 19,
-     "anim": "a1304",
-     "pos": [
-      0.0,
-      -20.0
-     ],
-     "postype": "p1",
-     "removeTime": -2,
-     "priority": 10,
-     "scale": [
-      1.0,
-      1.0
-     ]
-    },
-    {
-     "at": 21,
-     "anim": "a1304",
-     "pos": [
-      0.0,
-      -25.0
-     ],
-     "postype": "p1",
-     "removeTime": -2,
-     "priority": 10,
-     "scale": [
-      1.0,
-      1.0
-     ]
-    },
-    {
-     "at": 30,
-     "anim": "a1301",
-     "pos": [
-      -30.0,
-      0.0
-     ],
-     "postype": "p1",
-     "removeTime": -2,
-     "priority": 10,
-     "scale": [
-      1.0,
-      0.5
-     ]
-    },
-    {
-     "at": 25,
-     "anim": "a1306",
-     "pos": [
-      -7.0,
-      -15.0
-     ],
-     "postype": "p1",
-     "removeTime": -2,
-     "priority": 10,
-     "scale": [
-      1.0,
-      1.0
-     ]
-    }
-   ],
-   "afterimage": {
-    "at": 1,
-    "time": 80,
-    "length": 10,
-    "trans": "add",
-    "palAdd": [
-     90,
-     0,
-     0
-    ],
-    "palMul": [
-     1.2,
-     0.5,
-     0.5
-    ]
-   },
-   "palFx": [
-    {
-     "at": 1,
-     "time": 90,
-     "add": [
-      80,
-      -20,
-      -20
-     ],
-     "sinAdd": [
-      60,
-      0,
-      0,
-      8
-     ]
-    }
-   ],
-   "superPause": {
-    "at": 1,
-    "time": 60,
-    "darken": true
-   },
-   "flash": {
-    "at": 1,
-    "time": 8,
-    "color": [
-     255,
-     40,
-     40
-    ]
-   }
-  },
-  {
    "id": "shield_backup",
    "name": "S.H.I.E.L.D. Backup",
    "note": "Hidden in the original .cmd (Hyper4, commented out): Agent Coulson's truck and the strike team, unlocked."
+  },
+  {
+   "id": "red_ledger",
+   "name": "Red Ledger"
   }
- ]
+ ],
+ "scripts": {
+  "cns": "[Statedef 90100]\ntype = S\nmovetype = A\nphysics = S\nanim = 0\nctrl = 0\nvelset = 0, 0\npoweradd = -3000\nsprpriority = 2\n\n[State 90100, pause]\ntype = SuperPause\ntrigger1 = time = 0\ntime = 40\nmovetime = 40\ndarken = 1\nsound = S3300, 0\n\n[State 90100, vanish]\ntype = AssertSpecial\ntrigger1 = time < 10\nflag = invisible\n\n[State 90100, ghost]\ntype = AfterImage\ntrigger1 = time = 0\ntime = 24\nlength = 8\ntrans = add\npaladd = 40, 0, 0\n\n[State 90100, behind]\ntype = PosSet\ntrigger1 = time = 9\nx = EnemyNear, Pos X - 30 * EnemyNear, Facing\n\n[State 90100, spin]\ntype = ChangeState\ntrigger1 = time = 10\nvalue = 1320\n"
+ }
 }

@@ -121,15 +121,26 @@ def char_card(pack, zip_name):
     return card
 
 
+def exact_sprites(pack, name):
+    meta = pack.read(f"{name}/sprites/meta.json")
+    if not meta:
+        return None, None
+    files = {(s["g"], s["i"]): s["file"] for s in json.loads(meta)["sff"]["sprites"] if s.get("file")}
+    read = lambda key: pack.read(f"{name}/sprites/{files[key]}") if key in files else None
+    return read((0, 0)), read((9000, 1)) or read((9000, 0))
+
+
 def umf_card(pack, zip_name):
     name = os.path.splitext(zip_name)[0]
     names = [n for n in pack.names if n.startswith(name.lower() + "/") and n.count("/") == 1 and n.endswith(".json")]
     title = name
     if names:
         title = json.loads(pack.read(names[0])).get("name", name)
-    idle_raw = pack.require("idle sprite", f"{name}/sprites/01_idle.png")
+    idle_raw, portrait_raw = exact_sprites(pack, name)
+    if idle_raw is None:
+        idle_raw = pack.require("idle sprite", f"{name}/sprites/01_idle.png")
+        portrait_raw = pack.read(f"{name}/sprites/portrait.png")
     idle = Image.open(io.BytesIO(idle_raw)).convert("RGBA")
-    portrait_raw = pack.read(f"{name}/sprites/portrait.png")
     card = Image.new("RGBA", CARD, (18, 20, 32, 255))
     grad = np.linspace(40, 10, CARD[1], dtype=np.uint8)[:, None]
     card.paste(Image.fromarray(np.dstack([grad.repeat(CARD[0], 1)] * 3 + [np.full((CARD[1], CARD[0]), 255, np.uint8)])))
