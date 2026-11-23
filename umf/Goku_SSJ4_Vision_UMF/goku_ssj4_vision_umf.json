@@ -5,7 +5,7 @@
   },
   "author": "_Vision (M.U.G.E.N); UMF conversion",
   "color": "#c8102e",
-  "description": "Goku Super Saiyan 4 by _Vision, migrated to UMF with skill afterimage trails and ki recharge on R.",
+  "description": "Goku Super Saiyan 4 by _Vision, migrated to UMF with the After Image skill (x+y), skill afterimage trails and ki recharge on R.",
   "format": "umf/2",
   "id": "goku_ssj4_vision_umf",
   "moves": [],
@@ -26241,7 +26241,8 @@
     "cns": [
       "[Statedef -2]\n\n[State -2, Afterimage Shunkan Ido ground]\ntype = AfterImage\ntrigger1 = StateNo = 7500 && Time = 1\ntime = 25\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Shunkan Ido ground 2]\ntype = AfterImage\ntrigger1 = StateNo = 7510 && Time = 1\ntime = 25\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Shunkan Ido back]\ntype = AfterImage\ntrigger1 = StateNo = 7520 && Time = 1\ntime = 25\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Shunkan Ido back 2]\ntype = AfterImage\ntrigger1 = StateNo = 7530 && Time = 1\ntime = 25\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Shunkan Ido air back]\ntype = AfterImage\ntrigger1 = StateNo = 7535 && Time = 1\ntime = 25\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Shunkan Ido air]\ntype = AfterImage\ntrigger1 = StateNo = 7550 && Time = 1\ntime = 25\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Kamehameha]\ntype = AfterImage\ntrigger1 = StateNo = 1700 && Time = 1\ntime = 60\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Kamehameha air]\ntype = AfterImage\ntrigger1 = StateNo = 31700 && Time = 1\ntime = 60\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Super Kamehameha]\ntype = AfterImage\ntrigger1 = StateNo = 1800 && Time = 1\ntime = 60\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Super Kamehameha air]\ntype = AfterImage\ntrigger1 = StateNo = 31800 && Time = 1\ntime = 60\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Kamehameha x10]\ntype = AfterImage\ntrigger1 = StateNo = 1900 && Time = 1\ntime = 60\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Fireball barrage]\ntype = AfterImage\ntrigger1 = StateNo = 1390 && Time = 1\ntime = 45\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Fireball barrage 2]\ntype = AfterImage\ntrigger1 = StateNo = 2390 && Time = 1\ntime = 45\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Dragon Fist]\ntype = AfterImage\ntrigger1 = StateNo = 3030 && Time = 1\ntime = 60\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Flight]\ntype = AfterImage\ntrigger1 = StateNo = 3001 && Time = 1\ntime = 40\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Flight dash]\ntype = AfterImage\ntrigger1 = StateNo = 3115 && Time = 1\ntime = 40\nlength = 8\nframegap = 3\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State -2, Afterimage Clear on Hit]\ntype = AfterImageTime\ntrigger1 = MoveType = H\ntime = 0\n",
       "[Statedef 90200]\ntype = S\nmovetype = I\nphysics = S\nanim = 735\nvelset = 0,0\nctrl = 0\n\n[State 90200, Sound]\ntype = PlaySnd\ntrigger1 = Time = 0\nvalue = 7,0\nvolume = 255\n\n[State 90200, Loop Sound]\ntype = PlaySnd\ntrigger1 = TimeMod = 40,39\nvalue = 1,0\nvolume = 255\n\n[State 90200, Ki]\ntype = PowerAdd\ntrigger1 = Power < 3000\nvalue = 12\n\n[State 90200, Glow]\ntype = PalFX\ntrigger1 = TimeMod = 4,0\ntime = 3\nadd = 40,40,0\n\n[State 90200, Aura Trail]\ntype = AfterImage\ntrigger1 = Time = 1\ntime = 2\nlength = 6\nframegap = 4\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State 90200, Keep Trail]\ntype = AfterImageTime\ntrigger1 = Time > 1\ntime = 2\n\n[State 90200, Loop Anim]\ntype = ChangeAnim\ntrigger1 = AnimTime = 0\nvalue = 735\n\n[State 90200, Release]\ntype = ChangeState\ntrigger1 = Time >= 6 && command != \"umf_charge_ki\"\ntrigger2 = Time >= 6 && Power >= 3000\nvalue = 0\nctrl = 1\n",
-      "[Statedef -1]\n\n[State -1, Charge Ki (R)]\ntype = ChangeState\nvalue = 90200\ntriggerall = command = \"umf_charge_ki\"\ntrigger1 = statetype != A && ctrl\n\n"
+      "[Statedef 90300]\ntype = S\nmovetype = I\nphysics = N\nanim = 100\nvelset = 0,0\nctrl = 0\npoweradd = -200\n\n[State 90300, Invulnerable]\ntype = NotHitBy\ntrigger1 = Time = 0\nvalue = SCA\ntime = 18\n\n[State 90300, Sound]\ntype = PlaySnd\ntrigger1 = Time = 0\nvalue = 0,57\nvolume = 255\n\n[State 90300, Trail]\ntype = AfterImage\ntrigger1 = Time = 0\ntime = 30\nlength = 10\nframegap = 2\ntrans = add\npalbright = 10,10,10\npalcontrast = 225,255,255\n\n[State 90300, Blink Behind Foe]\ntype = PosAdd\ntrigger1 = Time = 6\nx = P2Dist X + 40\n\n[State 90300, Face Foe]\ntype = Turn\ntrigger1 = Time = 6\n\n[State 90300, Recover]\ntype = ChangeState\ntrigger1 = Time >= 20\nvalue = 0\nctrl = 1\n",
+      "[Statedef -1]\n\n[State -1, Charge Ki (R)]\ntype = ChangeState\nvalue = 90200\ntriggerall = command = \"umf_charge_ki\"\ntrigger1 = statetype != A && ctrl\n\n[State -1, After Image]\ntype = ChangeState\nvalue = 90300\ntriggerall = command = \"umf_after_image\"\ntriggerall = power >= 200\ntrigger1 = statetype != A && ctrl\n\n"
     ],
     "commands": [
       {
@@ -26251,6 +26252,15 @@
         "input": "/s",
         "name": "umf_charge_ki",
         "state": 90200,
+        "time": 15
+      },
+      {
+        "buffer": 1,
+        "cost": 200,
+        "display": "After Image",
+        "input": "x+y",
+        "name": "umf_after_image",
+        "state": 90300,
         "time": 15
       }
     ],

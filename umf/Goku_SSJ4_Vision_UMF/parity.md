@@ -91,3 +91,4 @@ Moves that exist only in the bundle (native `moves`, `scripts`, `mugenRoutes`), 
 | command | input | when | state | reached | states visited | damage | sounds |
 |---|---|---|---|---|---|---|---|
 | umf_charge_ki | `/s` | stand | 90200 | yes | [90200, 0] | 0 | 1 |
+| umf_after_image | `x+y` | stand | 90300 | yes | [90300, 0] | 0 | 1 |
