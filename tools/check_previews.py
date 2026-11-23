@@ -33,8 +33,6 @@ def zip_problems(path, kind, name):
 def umf_problems(path, name, names):
     out = []
     folder = os.path.join(os.path.dirname(path), name)
-    if not os.path.isdir(folder):
-        return [f"umf/{name}.zip has no source folder umf/{name}/"]
     with zipfile.ZipFile(path) as zf:
         packed = {n: zf.read(n) for n in names if not n.endswith("/")}
     jsons = [n for n in packed if n.count("/") == 1 and n.startswith(name + "/") and n.endswith(".json")]
@@ -49,6 +47,8 @@ def umf_problems(path, name, names):
             out.append(f"layout: {jsons[0]} is not a umf fighter")
     if f"{name}/sprites/01_idle.png" not in packed and f"{name}/sprites/meta.json" not in packed:
         out.append(f"layout: umf/{name}.zip has no {name}/sprites/01_idle.png (or sprites/meta.json for an exact M.U.G.E.N pack)")
+    if not os.path.isdir(folder):
+        return out
     for base, _, files in os.walk(folder):
         for f in files:
             arc = os.path.relpath(os.path.join(base, f), os.path.dirname(folder)).replace(os.sep, "/")

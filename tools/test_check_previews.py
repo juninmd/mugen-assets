@@ -1,4 +1,5 @@
 import os
+import shutil
 import tempfile
 import unittest
 import zipfile
@@ -78,6 +79,22 @@ class CheckUmf(unittest.TestCase):
         with tempfile.TemporaryDirectory() as root:
             zipped = {"Hero/" + k: v for k, v in files.items()}
             self.assertEqual(self.build(root, zipped, files), [])
+
+    def test_zip_only_umf_pack_without_source_folder(self):
+        files = {"hero.json": b'{"format":"umf/2"}', "sprites/01_idle.png": b"png"}
+        with tempfile.TemporaryDirectory() as root:
+            zipped = {"Hero/" + k: v for k, v in files.items()}
+            self.build(root, zipped, files)
+            shutil.rmtree(os.path.join(root, "umf", "Hero"))
+            self.assertEqual(check_previews.problems(root), [])
+
+    def test_zip_only_umf_pack_still_validates_layout(self):
+        with tempfile.TemporaryDirectory() as root:
+            self.build(root, {"Hero/hero.json": b'{"format":"nope"}'}, {})
+            shutil.rmtree(os.path.join(root, "umf", "Hero"))
+            probs = check_previews.problems(root)
+            self.assertTrue(any("not a umf fighter" in p for p in probs))
+            self.assertTrue(any("01_idle.png" in p for p in probs))
 
     def test_stale_zip_and_bad_format(self):
         files = {"hero.json": b'{"format":"umf/2"}', "sprites/01_idle.png": b"png"}
