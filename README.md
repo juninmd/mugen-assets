@@ -32,7 +32,7 @@ Extraído de packs públicos no archive.org:
 
 Personagens e stages pertencem aos seus autores originais (veja o readme dentro de cada zip). Franquias são marcas de seus donos; uso pessoal, não comercial.
 
-## Personagens (70)
+## Personagens (71)
 
 <table>
 <tr><td align="center"><img src="previews/chars/Aquaman.png" width="200"><br><sub>Aquaman</sub></td><td align="center"><img src="previews/chars/Batman_Rebirth.png" width="200"><br><sub>Batman_Rebirth</sub></td><td align="center"><img src="previews/chars/BlackPanther.png" width="200"><br><sub>BlackPanther</sub></td><td align="center"><img src="previews/chars/BlackWidow.png" width="200"><br><sub>BlackWidow</sub></td></tr>
@@ -53,6 +53,7 @@ Personagens e stages pertencem aos seus autores originais (veja o readme dentro 
 <tr><td align="center"><img src="previews/chars/Trunks_Future_SS.png" width="200"><br><sub>Trunks_Future_SS</sub></td><td align="center"><img src="previews/chars/Tsunade.png" width="200"><br><sub>Tsunade</sub></td><td align="center"><img src="previews/chars/Vegeta_Majin.png" width="200"><br><sub>Vegeta_Majin</sub></td><td align="center"><img src="previews/chars/Venom.png" width="200"><br><sub>Venom</sub></td></tr>
 <tr><td align="center"><img src="previews/chars/Wolverine.png" width="200"><br><sub>Wolverine</sub></td><td align="center"><img src="previews/chars/Wonder_Woman_New52.png" width="200"><br><sub>Wonder_Woman_New52</sub></td><td align="center"><img src="previews/chars/bane.png" width="200"><br><sub>bane</sub></td><td align="center"><img src="previews/chars/blackadam.png" width="200"><br><sub>blackadam</sub></td></tr>
 <tr><td align="center"><img src="previews/chars/doomsday.png" width="200"><br><sub>doomsday</sub></td><td align="center"><img src="previews/chars/superman.png" width="200"><br><sub>superman</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/Goku_SSJ4_Vision.png" width="200"><br><sub>Goku_SSJ4_Vision</sub></td></tr>
 </table>
 
 ## Stages (18)
@@ -66,8 +67,8 @@ Personagens e stages pertencem aos seus autores originais (veja o readme dentro 
 <tr><td align="center"><img src="previews/stages/dbz_kame_house.png" width="260"><br><sub>dbz_kame_house</sub></td><td align="center"><img src="previews/stages/tenkaichiHR.png" width="260"><br><sub>tenkaichiHR</sub></td><td align="center"><img src="previews/stages/xmagneto.png" width="260"><br><sub>xmagneto</sub></td></tr>
 </table>
 
-## Lutadores UMF (2)
+## Lutadores UMF (3)
 
 <table>
-<tr><td align="center"><img src="previews/umf/BlackWidow_UMF.png" width="260"><br><sub>BlackWidow_UMF</sub></td><td align="center"><img src="previews/umf/Goku_SSJ4_UMF.png" width="260"><br><sub>Goku_SSJ4_UMF</sub></td></tr>
+<tr><td align="center"><img src="previews/umf/BlackWidow_UMF.png" width="260"><br><sub>BlackWidow_UMF</sub></td><td align="center"><img src="previews/umf/Goku_SSJ4_UMF.png" width="260"><br><sub>Goku_SSJ4_UMF</sub></td><td align="center"><img src="previews/umf/Goku_SSJ4_Vision_UMF.png" width="260"><br><sub>Goku_SSJ4_Vision_UMF (_Vision)</sub></td></tr>
 </table>
