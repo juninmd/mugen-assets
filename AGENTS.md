@@ -32,6 +32,13 @@ python -m unittest discover -s tools -p "test_*.py"       # CI: tests for the ch
 - Zip layout must not contain absolute paths or `..` entries.
 - `pack_umf.py` uses fixed timestamps for reproducible zips; keep it that way.
 - Credit: each pack's author is listed in `README.md`; keep that table when adding content.
+- Zip only: upload each character as one whole `.zip`. Do not also commit an extracted folder duplicating the zip's content; the zip keeps the repo organized and grouped. Existing folders are not deleted without an explicit request.
+- Exception today: `umf/<Nome>.zip` still needs its `umf/<Nome>/` source folder, because `check_previews.py` (`umf_problems`) fails without it. Relaxing that check is a separate change.
+
+## Regras (pt-BR)
+
+- Só o zip: suba cada personagem como um único `.zip` completo. Não commite também a pasta extraída duplicando o conteúdo do zip; o zip deixa o repositório mais organizado e agrupado. Pastas já existentes não são apagadas sem pedido explícito.
+- Exceção atual: `umf/<Nome>.zip` ainda exige a pasta-fonte `umf/<Nome>/`, pois o `check_previews.py` (`umf_problems`) falha sem ela. Flexibilizar essa checagem é uma mudança separada.
 
 ## Gotchas
 
