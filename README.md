@@ -29,10 +29,12 @@ Extraído de packs públicos no archive.org:
 | [Dragon Ball x Naruto Storm Budokai Mugen](https://archive.org/details/dragon-ball-x-naruto-storm-budokai-mugen) | 30 chars, 8 stages |
 | [DC Comics Mugenation Project](https://archive.org/details/dc-comics-mugenation-project-for-android-pc-unotag.-7z) | 20 chars, 5 stages |
 | [Marvel Mugenation Project 2021](https://archive.org/details/marvel-mugenation-project-2021-for-android-pc.-7z) | 20 chars, 5 stages |
+| [Ferchogt X's Mugen Characters](https://archive.org/details/ferchogt-x-mugen-characters) | 2 chars (MvC2 Iori, SonSon) |
+| [Pokemon Type Stage (MUGEN)](https://archive.org/details/pokemon-type-stage_202508) | 6 stages com música (Fire, Water, Ghost, Dragon, Ice, Electric) |
 
 Personagens e stages pertencem aos seus autores originais (veja o readme dentro de cada zip). Franquias são marcas de seus donos; uso pessoal, não comercial.
 
-## Personagens (71)
+## Personagens (73)
 
 <table>
 <tr><td align="center"><img src="previews/chars/Aquaman.png" width="200"><br><sub>Aquaman</sub></td><td align="center"><img src="previews/chars/Batman_Rebirth.png" width="200"><br><sub>Batman_Rebirth</sub></td><td align="center"><img src="previews/chars/BlackPanther.png" width="200"><br><sub>BlackPanther</sub></td><td align="center"><img src="previews/chars/BlackWidow.png" width="200"><br><sub>BlackWidow</sub></td></tr>
@@ -54,9 +56,10 @@ Personagens e stages pertencem aos seus autores originais (veja o readme dentro 
 <tr><td align="center"><img src="previews/chars/Wolverine.png" width="200"><br><sub>Wolverine</sub></td><td align="center"><img src="previews/chars/Wonder_Woman_New52.png" width="200"><br><sub>Wonder_Woman_New52</sub></td><td align="center"><img src="previews/chars/bane.png" width="200"><br><sub>bane</sub></td><td align="center"><img src="previews/chars/blackadam.png" width="200"><br><sub>blackadam</sub></td></tr>
 <tr><td align="center"><img src="previews/chars/doomsday.png" width="200"><br><sub>doomsday</sub></td><td align="center"><img src="previews/chars/superman.png" width="200"><br><sub>superman</sub></td></tr>
 <tr><td align="center"><img src="previews/chars/Goku_SSJ4_Vision.png" width="200"><br><sub>Goku_SSJ4_Vision</sub></td></tr>
+<tr><td align="center"><img src="previews/chars/MvC2_Iori.png" width="200"><br><sub>MvC2_Iori</sub></td><td align="center"><img src="previews/chars/MvC2_Sonson.png" width="200"><br><sub>MvC2_Sonson</sub></td></tr>
 </table>
 
-## Stages (18)
+## Stages (24)
 
 <table>
 <tr><td align="center"><img src="previews/stages/Academia_Ninja.png" width="260"><br><sub>Academia_Ninja</sub></td><td align="center"><img src="previews/stages/AvengersDay_1.1Zoom.png" width="260"><br><sub>AvengersDay_1.1Zoom</sub></td><td align="center"><img src="previews/stages/Campo3.png" width="260"><br><sub>Campo3</sub></td></tr>
@@ -65,6 +68,8 @@ Personagens e stages pertencem aos seus autores originais (veja o readme dentro 
 <tr><td align="center"><img src="previews/stages/KryptonDestroyed.png" width="260"><br><sub>KryptonDestroyed</sub></td><td align="center"><img src="previews/stages/LTDsLexcorpDemolished.png" width="260"><br><sub>LTDsLexcorpDemolished</sub></td><td align="center"><img src="previews/stages/OscorpLab_1.1Zoom.png" width="260"><br><sub>OscorpLab_1.1Zoom</sub></td></tr>
 <tr><td align="center"><img src="previews/stages/WayneManorRuins_1.1Zoom.png" width="260"><br><sub>WayneManorRuins_1.1Zoom</sub></td><td align="center"><img src="previews/stages/dbcity.png" width="260"><br><sub>dbcity</sub></td><td align="center"><img src="previews/stages/dbnamek.png" width="260"><br><sub>dbnamek</sub></td></tr>
 <tr><td align="center"><img src="previews/stages/dbz_kame_house.png" width="260"><br><sub>dbz_kame_house</sub></td><td align="center"><img src="previews/stages/tenkaichiHR.png" width="260"><br><sub>tenkaichiHR</sub></td><td align="center"><img src="previews/stages/xmagneto.png" width="260"><br><sub>xmagneto</sub></td></tr>
+<tr><td align="center"><img src="previews/stages/Pokemon_FireType.png" width="260"><br><sub>Pokemon_FireType</sub></td><td align="center"><img src="previews/stages/Pokemon_WaterType.png" width="260"><br><sub>Pokemon_WaterType</sub></td><td align="center"><img src="previews/stages/Pokemon_GhostType.png" width="260"><br><sub>Pokemon_GhostType</sub></td><td align="center"><img src="previews/stages/Pokemon_DragonType.png" width="260"><br><sub>Pokemon_DragonType</sub></td></tr>
+<tr><td align="center"><img src="previews/stages/Pokemon_IceType.png" width="260"><br><sub>Pokemon_IceType</sub></td><td align="center"><img src="previews/stages/Pokemon_ElectricType.png" width="260"><br><sub>Pokemon_ElectricType</sub></td></tr>
 </table>
 
 ## Lutadores UMF (3)
